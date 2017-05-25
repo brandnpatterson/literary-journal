@@ -1,3 +1,7 @@
+# node-app-2017
+
+I'm building a CRUD Application in Node with the 🔥 insight of @wesbos.
+
 ## What is this?
 
 Just you wait folks!
@@ -23,5 +27,3 @@ That will populate 16 stores with 3 authors and 41 reviews. The logins for the a
 |Wes Bos|wes@example.com|wes|
 |Debbie Downer|debbie@example.com|debbie|
 |Beau|beau@example.com|beau|
-
-
