@@ -3,11 +3,15 @@ const Store = mongoose.model('Store');
 
 exports.homePage = (req, res) => {
   console.log(req.name);
-  res.render('index');
+  res.render('index', {
+    title: 'Home'
+  });
 };
 
 exports.addStore = (req, res) => {
-  res.render('editStore', {title: 'Add Store'});
+  res.render('editStore', {
+    title: 'Add Store'
+  });
 };
 
 exports.createStore = async (req, res) => {
