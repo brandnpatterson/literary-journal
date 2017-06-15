@@ -7,6 +7,11 @@ function autocomplete(input, latInput, lngInput) {
     latInput.value = place.geometry.location.lat();
     lngInput.value = place.geometry.location.lng();
   });
+  input.on('keydown', (event) => {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+    }
+  });
 }
 
 export default autocomplete;
