@@ -101,3 +101,15 @@ exports.getStoreBySlug = async (req, res, next) => {
     title: store.name
   });
 };
+
+exports.getStoresByTag = async (req, res, next) => {
+  // get a list of all the stores
+  const tags = await Store.getTagsList();
+  const tag = req.params.tag;
+  
+  res.render('tags', {
+    tags: tags,
+    tag: tag,
+    title: 'Tags'
+  });
+};
