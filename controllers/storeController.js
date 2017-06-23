@@ -37,12 +37,6 @@ exports.resize = async (req, res, next) => {
   return next();
 };
 
-// exports.homePage = (req, res) => {
-//   res.render('index', {
-//     title: 'Home'
-//   });
-// };
-
 exports.getStores = async (req, res) => {
   const stores = await Store.find();
   res.render('stores', {
@@ -117,7 +111,6 @@ exports.getStoresByTag = async (req, res, next) => {
   const [tags, stores] = await Promise.all([
     tagsPromise, storesPromise
   ]);
-
 
   res.render('tags', {
     tags: tags,
