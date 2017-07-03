@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
 // import environmental variables from our variables.env file
-require('dotenv').config({ path: 'variables.env' });
+require('dotenv').config({
+  path: 'variables.env'
+});
 
 // Connect to our Database and handle an bad connections
 mongoose.connect(process.env.DATABASE);
@@ -17,5 +19,5 @@ require('./models/Store');
 const app = require('./app');
 app.set('port', process.env.PORT || 8888);
 const server = app.listen(app.get('port'), () => {
-  console.log(`Express running → PORT ${server.address().port}`);
+  console.log(`Express server running on PORT ${server.address().port}`);
 });
