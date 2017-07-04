@@ -122,3 +122,7 @@ exports.getStoresByTag = async (req, res, next) => {
     title: 'Tags'
   });
 };
+
+exports.searchStores = async (req, res) => {
+  res.json(stores);
+};
