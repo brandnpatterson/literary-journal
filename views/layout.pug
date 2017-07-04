@@ -13,14 +13,14 @@ html
             li.nav__item
               a.nav__link.nav__link--logo(href='/')
                 != h.icon('logo')
-            if !user || user.level < 20
-                each item in h.menuLow
+            if !user
+                each item in h.menu
                   li.nav__item
                     a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
                       != h.icon(item.icon)
                       span #{item.title}
-            else if user.level === 20
-              each item in h.menuHigh
+            else
+              each item in h.menuUser
                 li.nav__item
                   a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
                     != h.icon(item.icon)
