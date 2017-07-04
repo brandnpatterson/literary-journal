@@ -14,7 +14,7 @@ exports.login = passport.authenticate('local', {
 
 exports.logout = (req, res) => {
   req.logout();
-  req.flash('success', 'You are now logged out! 👋');
+  req.flash('success', 'You are now logged out!');
   res.redirect('/');
 };
 
@@ -30,13 +30,16 @@ exports.forgot = async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
 
   if (!user) {
+    // make sure user exists
     req.flash('error', 'No account with that email exists');
     return res.redirect('/login');
   } else {
+    // reset tokens and expiry on user account
     user.resetPasswordToken = crypto.randomBytes(20).toString('hex');
     user.resetPasswordExpires = Date.now() + 3600000; // one hour from now
     await user.save();
     const resetURL = `http://${req.headers.host}/account/reset/${user.resetPasswordToken}`;
+    // send the email to reset
     await mail.send({
       user: user,
       subject: 'Password Reset',
