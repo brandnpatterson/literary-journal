@@ -37,6 +37,12 @@ exports.resize = async (req, res, next) => {
   return next();
 };
 
+exports.getHome = async (req, res) => {
+  res.render('index', {
+    title: 'Home'
+  });
+};
+
 exports.getStores = async (req, res) => {
   const stores = await Store.find();
   res.render('stores', {

@@ -5,7 +5,7 @@ const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
-router.get('/', catchErrors(storeController.getStores));
+router.get('/', catchErrors(storeController.getHome));
 router.get('/stores', catchErrors(storeController.getStores));
 
 router.get('/add',
