@@ -71,3 +71,21 @@ exports.updateAccount = async (req, res) => {
   req.flash('success', 'Updated account successfully!');
   res.redirect('/account');
 };
+
+exports.registerKnightForm = (req, res) => {
+  res.render('registerKnight', {
+    title: 'Register Knight'
+  });
+};
+
+exports.registerKnight = async (req, res, next) => {
+  const user = new User({
+    email: req.body.email,
+    name: req.body.name,
+    level: 20
+  });
+  console.log(user.level);
+  const register = promisify(User.register, User);
+  await register(user, req.body.password);
+  res.redirect('/');
+}

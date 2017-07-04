@@ -1,0 +1,9 @@
+extends layout
+
+include mixins/registerKnightForm
+
+block content
+  .inner
+    if user && user.level > 10
+      h2= title
+      +registerKnightForm()

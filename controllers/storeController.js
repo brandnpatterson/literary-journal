@@ -37,7 +37,7 @@ exports.resize = async (req, res, next) => {
   return next();
 };
 
-exports.getHome = async (req, res) => {
+exports.getHome = (req, res) => {
   res.render('index', {
     title: 'Home'
   });

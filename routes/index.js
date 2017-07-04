@@ -5,7 +5,7 @@ const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
-router.get('/', catchErrors(storeController.getHome));
+router.get('/', storeController.getHome);
 router.get('/stores', catchErrors(storeController.getStores));
 router.get('/stores/:page', catchErrors(storeController.getStores));
 router.get('/stores/page/:page', catchErrors(storeController.getStores));
@@ -40,11 +40,16 @@ router.get('/login', userController.loginForm);
 router.post('/login', authController.login);
 
 router.get('/register', userController.registerForm);
-router.get('/register', userController.registerForm);
 router.post('/register',
   userController.validateRegister,
   userController.register,
   authController.login
+);
+
+router.get('/register-knight', userController.registerKnightForm);
+router.post('/register-knight',
+  userController.validateRegister,
+  userController.registerKnight
 );
 
 router.get('/logout', authController.logout);
