@@ -7,10 +7,12 @@ block content
     h2= tag ? `${title} - ${tag}` : title
     ul.tags
       each t in tags
-        li.tag
-          a.tag__link(href=`/tags/${t._id}` class=(t._id === tag ? 'tag__link--active' : ''))
-            span.tag__text= t._id
-            span.tag__count= t.count
+        if t._id != 'Approved'
+          li.tag
+            a.tag__link(href=`/tags/${t._id}` class=(t._id === tag ? 'tag__link--active' : ''))
+              span.tag__text= t._id
+              span.tag__count= t.count
     .stores
       each store in stores
-        +storeCard(store)
+        if store.tags.includes('Approved')
+          +storeCard(store)
