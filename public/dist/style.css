@@ -2,16 +2,6 @@
 html {
   font-size: 10px; }
 
-body {
-  background: #262161;
-  background: #efefef; }
-  body:before {
-    content: '';
-    display: block;
-    background: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%);
-    height: 10px;
-    width: 100%; }
-
 .inner {
   max-width: 900px;
   margin: 0 auto; }
@@ -609,7 +599,11 @@ label {
   background: #303030; }
   .nav__section {
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
     .nav__section--search {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto; }
@@ -619,7 +613,6 @@ label {
   .nav__link {
     background: #303030;
     color: white;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
     text-transform: uppercase;
     padding: 1.2rem 2rem 1rem 2rem;
     display: block;
@@ -639,9 +632,9 @@ label {
       fill: white;
       margin-bottom: 1rem; }
     .nav__link:hover, .nav__link--active {
-      border-bottom-color: rgba(0, 0, 0, 0.2);
-      border-right-color: rgba(0, 0, 0, 0.05);
-      background: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%) fixed; }
+      border-bottom-color: rgba(255, 255, 255, 0.2);
+      border-right-color: rgba(255, 255, 255, 0.05);
+      background: #303030; }
       .nav__link:hover svg, .nav__link--active svg {
         -ms-transform: scale(1.2);
             transform: scale(1.2); }
@@ -693,10 +686,7 @@ label {
     .nav__link svg {
       max-width: 100%; }
     .nav__link--logo svg {
-      width: 100%; }
-  .heart-count:before {
-    content: '\2665\FE0F';
-    margin-right: 1rem; } }
+      width: 100%; } }
 
 .table {
   width: 100%; }
@@ -759,7 +749,10 @@ label {
     width: 25px;
     fill: white; }
   .store__action--edit a {
-    border-bottom: 0; }
+    border-bottom: 0;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 15px; }
 
 .store__hero {
   position: relative;
@@ -773,7 +766,7 @@ label {
     width: 100%;
     top: 0;
     right: 0;
-    background: linear-gradient(45deg, #05b3d6 0%, rgba(5, 179, 214, 0) 70%), linear-gradient(135deg, #0958ec 10%, rgba(9, 88, 236, 0) 80%), linear-gradient(225deg, #d209ec 10%, rgba(210, 9, 236, 0) 80%), linear-gradient(315deg, #05e129 100%, rgba(5, 225, 41, 0) 70%);
+    background: gray;
     opacity: 0.6;
     z-index: 1;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
