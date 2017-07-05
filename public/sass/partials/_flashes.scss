@@ -19,7 +19,7 @@
   z-index: 1;
   border-radius: 3px;
   display: flex;
-  animation: slideIn forwards .1s ease-in-out 2;
+  animation: slideIn forwards .1s;
   animation-timing-function: cubic-bezier(0.01, 1.68, 0.58, 1);
   & + .flash {
     animation-delay: 0.55s;
