@@ -13,4 +13,7 @@ mixin storeForm(store = {})
             checked=(tags.includes(choice))
           )
           label(for=choice) #{choice}
+    if user.level > 10
+      label(for='approved') Check box to approve post
+      input(class='approved' type='checkbox' name='approved' value=store.approved)
     input(type='submit' value='Save' class='button')
