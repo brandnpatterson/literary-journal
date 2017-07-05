@@ -30,3 +30,11 @@ exports.menuUser = [
   { slug: '/tags', title: 'Tags', icon: 'tag', },
   { slug: '/add', title: 'Add', icon: 'add', }
 ];
+
+exports.choicesKnight = [
+ 'Approved', 'Short Story', 'Poetry', 'Prose', 'Non Fiction'
+];
+
+exports.choices = [
+ 'Short Story', 'Poetry', 'Prose', 'Non Fiction'
+];

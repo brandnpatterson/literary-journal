@@ -11,6 +11,6 @@ block content
         if user && user.level > 10
           +storeCard(store)
         else if !user || user.level === 10
-          if store.approved === false
+          if store.tags.includes('Approved')
             +storeCard(store)
     +pagination(page, pages)
