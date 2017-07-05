@@ -1,24 +1,5 @@
 const mongoose = require('mongoose');
 const Store = mongoose.model('Store');
-const multer = require('multer');
-const jimp = require('jimp');
-const uuid = require('uuid');
-
-const multerOptions = {
-  storage: multer.memoryStorage(),
-  fileFilter (req, file, next) {
-    const isPhoto = file.mimetype.startsWith('image/');
-    if (isPhoto) {
-      next(null, true);
-    } else {
-      next({
-        message: 'That filetype is not allowed'
-      }, false);
-    }
-  }
-};
-
-exports.upload = multer(multerOptions).single('photo');
 
 exports.getHome = (req, res) => {
   res.render('index', {
@@ -28,7 +9,7 @@ exports.getHome = (req, res) => {
 
 exports.getStores = async (req, res) => {
   const page = req.params.page || 1;
-  const limit = 4;
+  const limit = 6;
   const skip = (page * limit) - limit;
 
   const storesPromise = Store

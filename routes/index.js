@@ -14,18 +14,8 @@ router.get('/add',
   authController.isLoggedIn,
   storeController.addStore
 );
-router.post('/add',
-  // middleware
-  storeController.upload,
-  // handle database
-  catchErrors(storeController.createStore)
-);
-router.post('/add/:id',
-  // middleware
-  storeController.upload,
-  // handle database
-  catchErrors(storeController.updateStore)
-);
+router.post('/add', catchErrors(storeController.createStore));
+router.post('/add/:id', catchErrors(storeController.updateStore));
 
 router.get('/stores/:id/edit', catchErrors(storeController.editStore));
 router.get('/store/:slug', catchErrors(storeController.getStoreBySlug));
