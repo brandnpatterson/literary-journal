@@ -20,23 +20,6 @@ const multerOptions = {
 
 exports.upload = multer(multerOptions).single('photo');
 
-exports.resize = async (req, res, next) => {
-  if (!req.file) {
-    return next();
-  }
-  // split the mimetype and use the extension
-  const extension = req.file.mimetype.split('/')[1];
-  // create uuid and give it the file's extension type
-  req.body.photo = `${uuid.v4()}.${extension}`;
-
-  const photo = await jimp.read(req.file.buffer);
-  await photo.resize(800, jimp.AUTO);
-  await photo.write(`./public/uploads/${req.body.photo}`);
-
-  // once we have written the photo to our filesystem, keep going!
-  return next();
-};
-
 exports.getHome = (req, res) => {
   res.render('index', {
     title: 'Home'

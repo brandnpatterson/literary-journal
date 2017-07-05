@@ -17,15 +17,12 @@ router.get('/add',
 router.post('/add',
   // middleware
   storeController.upload,
-  catchErrors(storeController.resize),
   // handle database
   catchErrors(storeController.createStore)
 );
-
 router.post('/add/:id',
   // middleware
   storeController.upload,
-  catchErrors(storeController.resize),
   // handle database
   catchErrors(storeController.updateStore)
 );
