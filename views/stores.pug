@@ -8,5 +8,9 @@ block content
     h2= title
     .stores
       each store in stores
-        +storeCard(store)
+        if user && user.level > 10
+          +storeCard(store)
+        else if !user || user.level === 10
+          if store.approved === true
+            +storeCard(store)
     +pagination(page, pages, count)

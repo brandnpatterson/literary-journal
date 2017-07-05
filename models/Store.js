@@ -17,6 +17,10 @@ const storeSchema = new mongoose.Schema({
   created: {
     type: Date,
     default: Date.now
+  },
+  approved: {
+    type: Boolean,
+    default: false
   }
 });
 
