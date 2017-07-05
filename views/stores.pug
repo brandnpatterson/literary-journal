@@ -11,6 +11,6 @@ block content
         if user && user.level > 10
           +storeCard(store)
         else if !user || user.level === 10
-          if store.approved === true
+          if store.approved === false
             +storeCard(store)
-    +pagination(page, pages, count)
+    +pagination(page, pages)
