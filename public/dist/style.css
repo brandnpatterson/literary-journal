@@ -535,6 +535,10 @@ label {
     .search__result--active {
       background: #f1f1f1; }
 
+@media all and (max-width: 900px) {
+  .search {
+    width: 50%; } }
+
 @keyframes slideIn {
   0% {
     transform: translateX(-10px); }
@@ -603,8 +607,8 @@ label {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
     .nav__section--search {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto; }
