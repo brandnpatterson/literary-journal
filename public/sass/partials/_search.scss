@@ -11,19 +11,18 @@
     z-index: 5;
   }
   &__input {
-    font-size: 30px;
+    font-size: 20px;
     background: none;
-    color: white;
+    color: $black;
     outline: 0;
     border: 0;
   }
   &__result {
     padding: 10px;
     display: block;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid $black;
     &--active {
       background: #f1f1f1;
     }
   }
 }
-
