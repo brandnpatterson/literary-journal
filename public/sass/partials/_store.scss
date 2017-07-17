@@ -1,13 +1,14 @@
 .stores {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .store {
-  background:white;
+  background: white;
+  height: contain;
   margin: 10px 0;
-  width:30%;
+  width: 30%;
   box-shadow: $shad;
   &--wide {
     width: 100%;

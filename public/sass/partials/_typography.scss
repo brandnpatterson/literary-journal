@@ -4,7 +4,6 @@
          url('/fonts/panama-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 html {
@@ -42,37 +41,29 @@ p {
   position: relative;
   z-index: 2;
   margin:0;
-  font-size: 40px;
+  font-size: 30px;
   z-index: 2;
   line-height:1.1;
   transform: skew(0, -3deg);
   &--long {
-    font-size: 30px;
+    font-size: 20px;
   }
   &:before {
-    content: '';
     width:50px;
-    left:0;
-    top:0;
     height:100%;
-    // top:10%;
     display: block;
     position: absolute;
-    z-index: -1;
-    transform:skew(-5deg)
   }
   line-height:1.1;
-  // inline link inside
   a {
     border-bottom: 0;
-    $yellowa: rgba($yellow,0.8);
-    background-image: linear-gradient(to right, $yellowa 100%, $yellowa 50%);
+    background-image: linear-gradient(to right, white 100%, white 50%);
   }
 }
 
 .title--single {
   max-width: 600px;
   margin-top: -9rem;
-  font-size: 10rem;
+  font-size: 8rem;
   text-align: center;
 }
