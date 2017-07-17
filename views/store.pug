@@ -4,11 +4,9 @@ block content
   .inner
     .single
       .single__hero
-        img.single__image(src=`/uploads/${store.photo || 'store.png'}`)
         h2.title.title--single
           a(href=`/stores/${store.slug}`) #{store.name}
     .single__details.inner
-    p= store.slug
     p= store.description
 
     if store.tags
@@ -17,4 +15,4 @@ block content
           if tag != 'Approved'
             li.tag
               a.tag__link(href=`/tags/${tag}`)
-                span.tag__text ##{tag}
+                span.tag__text #{tag}
