@@ -10,3 +10,6 @@ mixin storeCard(store = {})
        a(href=`/store/${store.slug}`) #{store.name}
     .store__details
       p= store.description.split(' ').slice(0, 10).join(' ')
+      if user && user.level === 20
+        if store.tags.includes('Approved')
+          p.approved= store.tags[0]

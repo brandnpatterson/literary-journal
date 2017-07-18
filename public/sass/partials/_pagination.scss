@@ -1,9 +1,8 @@
 .pagination {
   display: flex;
   align-items: center;
+  margin: 2em 0;
   background: white;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   box-shadow: $shad;
   &__next {
     flex: 0 0 auto;

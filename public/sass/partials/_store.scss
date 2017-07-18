@@ -5,8 +5,10 @@
 }
 
 .store {
+  position: relative;
   background: white;
   height: contain;
+  padding: 20px 0 0;
   margin: 10px 0;
   width: 30%;
   box-shadow: $shad;
@@ -31,7 +33,6 @@
 .store__actions {
   position: relative;
   z-index: 2;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
   box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.2);
   margin-bottom: 50px;
   padding-top: 10px;
@@ -46,7 +47,7 @@
   font-size: 10px;
   svg {
     width: 25px;
-    fill: white
+    fill: $black;
   }
   &--edit {
     a {
@@ -62,19 +63,6 @@
   position: relative;
   padding: 0 10px 0 10px;
   text-align: right;
-  &:before {
-    display: block;
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    background: gray;
-    opacity: 0.6;
-    z-index: 1;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  }
   img {
     height: 100%;
     width: 100%;
@@ -85,4 +73,17 @@
     object-fit: cover;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
   }
+}
+
+.approved {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: red;
+  opacity: 0.8;
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.75;
+  padding: 10px;
+  text-align: right;
 }

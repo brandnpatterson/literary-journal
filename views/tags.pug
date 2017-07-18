@@ -4,17 +4,22 @@ include mixins/storeCard
 
 block content
   .inner
-    h2= tag ? `${title} - ${tag}` : title
+    h2= tag ? `${tag}` : title
     ul.tags
-      each store in stores
-        if store.tags.includes('Approved')
-          each t in tags
-            if !t._id.includes('Approved')
-              li.tag
-                a.tag__link(href=`/tags/${t._id}` class=(t._id === tag ? 'tag__link--active' : ''))
-                  span.tag__text= t._id
-                  span.tag__count= t.count
+      each t in tags
+        if user && user.level === 20
+          li.tag
+            a.tag__link(href=`/tags/${t._id}` class=(t._id === tag ? 'tag__link--active' : ''))
+              span.tag__text= t._id
+              span.tag__count= t.count
+        else if !user || user.level === 10
+          if !t._id.includes('Approved')
+            li.tag
+              a.tag__link(href=`/tags/${t._id}` class=(t._id === tag ? 'tag__link--active' : ''))
+                span.tag__text= t._id
     .stores
       each store in stores
-        if store.tags.includes('Approved')
+        if user && user.level === 20
           +storeCard(store)
+        else if store.tags.includes('Approved')
+            +storeCard(store)

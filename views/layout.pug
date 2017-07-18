@@ -46,7 +46,14 @@ html
                   button.flash__remove(onClick='this.parentElement.remove()') &times;
     .content
       block content
-
+        
+    footer
+      a(href='http://brandnpatterson.com')
+        p.copyright
+          | ©
+          script(type='text/javascript') document.write(new Date().getFullYear());
+          | &nbsp; Brandon Patterson. All Rights Reserved.
+      
     block scripts
       script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
       script(src='/dist/App.bundle.js')
