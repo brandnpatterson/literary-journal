@@ -1,0 +1,14 @@
+extends layout
+
+include mixins/storeCard
+
+block content
+  .inner
+    h2= title
+    .stores
+      each store in stores
+        if user && user.level === 20
+          +storeCard(store)
+        else if !user || user.level === 10
+          if store.tags.includes('Approved')
+            +storeCard(store)

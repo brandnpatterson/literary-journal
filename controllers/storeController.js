@@ -1,15 +1,9 @@
 const mongoose = require('mongoose');
 const Store = mongoose.model('Store');
 
-exports.getHome = (req, res) => {
-  res.render('index', {
-    title: 'Home'
-  });
-};
-
 exports.getStores = async (req, res) => {
   const page = req.params.page || 1;
-  const limit = 6;
+  const limit = 7;
   const skip = (page * limit) - limit;
 
   const storesPromise = Store
@@ -30,7 +24,35 @@ exports.getStores = async (req, res) => {
     return;
   }
   res.render('stores', {
-    title: 'Posts',
+    title: 'Literary Journal',
+    stores, page, pages, count
+  });
+};
+
+exports.getFeatured = async (req, res) => {
+  const page = req.params.page || 1;
+  const limit = 7;
+  const skip = (page * limit) - limit;
+
+  const storesPromise = Store
+    .find()
+    .skip(skip)
+    .limit(limit)
+    .sort({ created: 'desc' });
+
+  const countPromise = Store.count();
+
+  const [stores, count] = await Promise.all([storesPromise, countPromise]);
+
+  const pages = Math.ceil(count / limit);
+
+  if (!stores.length && skip) {
+    req.flash('info', `Hey! You asked for page ${page}. The last one is page ${pages}`);
+    res.redirect(`/stores/page/${pages}`);
+    return;
+  }
+  res.render('featured', {
+    title: 'Literary Journal',
     stores, page, pages, count
   });
 };
