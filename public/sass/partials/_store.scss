@@ -8,12 +8,28 @@
   position: relative;
   background: white;
   height: contain;
-  padding: 20px 0 0;
+  padding: 20px 0;
   margin: 10px 0;
   width: 30%;
   box-shadow: $shad;
   &--wide {
     width: 100%;
+  }
+  &__featured {
+    position: relative;
+    background: white;
+    height: contain;
+    padding: 50px 0 0;
+    margin: 10px 0;
+    height: 300px;
+    width: 51%;
+    box-shadow: $shad;
+    @media all and (max-width: 850px) {
+      width: 48%;
+    }
+    @media all and (max-width: 550px) {
+      width: 100%;
+    }
   }
   &__details {
     padding: 2rem;
@@ -78,12 +94,22 @@
 .approved {
   position: absolute;
   bottom: 0;
-  right: 0;
-  color: red;
+  left: 0;
+  color: limegreen;
   opacity: 0.8;
   font-size: 12px;
   font-style: italic;
   opacity: 0.75;
   padding: 10px;
-  text-align: right;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.8;
+  font-size: 12px;
+  opacity: 0.75;
+  padding: 10px;
+  text-decoration: underline;
 }

@@ -3,7 +3,7 @@ const Store = mongoose.model('Store');
 
 exports.getStores = async (req, res) => {
   const page = req.params.page || 1;
-  const limit = 7;
+  const limit = 6;
   const skip = (page * limit) - limit;
 
   const storesPromise = Store
@@ -24,14 +24,14 @@ exports.getStores = async (req, res) => {
     return;
   }
   res.render('stores', {
-    title: 'Literary Journal',
+    title: 'Posts',
     stores, page, pages, count
   });
 };
 
 exports.getFeatured = async (req, res) => {
   const page = req.params.page || 1;
-  const limit = 7;
+  const limit = 6;
   const skip = (page * limit) - limit;
 
   const storesPromise = Store
