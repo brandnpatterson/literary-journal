@@ -23,7 +23,7 @@ exports.getStores = async (req, res) => {
     res.redirect(`/stores/page/${pages}`);
     return;
   }
-  res.render('stores', {
+  res.render('posts', {
     title: 'Posts',
     stores, page, pages, count
   });

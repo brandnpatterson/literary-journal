@@ -21,12 +21,12 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.siteName = `Literary Journal`;
 
 exports.menu = [
-  { slug: '/stores', title: 'Posts' },
+  { slug: '/posts', title: 'Posts' },
   { slug: '/tags', title: 'Tags' }
 ];
 
 exports.menuUser = [
-  { slug: '/stores', title: 'Posts' },
+  { slug: '/posts', title: 'Posts' },
   { slug: '/tags', title: 'Tags' },
   { slug: '/add', title: 'Add' }
 ];
