@@ -1,7 +1,9 @@
 mixin loginForm()
-  form.form(action='/login' method='POST')
-    label(for='email') Email
-    input(type='email' name='email')
-    label(for='password') Password
-    input(type='password' name='password')
+  form.form.form-log-in(action='/login' method='POST')
+    .form-group
+      input.email-log-in(type='text' name='email')
+      p
+    .form-group
+      input.password-log-in(type='password' name='password')
+      p
     input.button(type='submit' value='Log In')
