@@ -7,10 +7,10 @@ mixin storeCard(store = {})
             a(href=`/stores/${store._id}/edit`)
               != h.icon('pencil')
       h2.title
-       a(href=`/store/${store.slug}`) #{store.name}
+       a(href=`/post/${store.slug}`) #{store.name}
     .store__details
       p= store.description.split(' ').slice(0, 10).join(' ')
-      a.read-more(href=`/store/${store.slug}`) Read More
+      a.read-more(href=`/post/${store.slug}`) Read More
       if user && user.level === 20
         if store.tags.includes('Approved')
           p.approved= store.tags[0]

@@ -100,7 +100,7 @@ exports.getStoreBySlug = async (req, res, next) => {
     slug: req.params.slug
   });
   if (!store) return next();
-  res.render('store', {
+  res.render('post', {
     store: store,
     title: store.name
   });
