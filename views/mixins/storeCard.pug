@@ -4,7 +4,7 @@ mixin storeCard(store = {})
       if user && user.level === 20
         .store__actions
           .store__action.store__action--edit
-            a(href=`/stores/${store._id}/edit`)
+            a(href=`/posts/${store._id}/edit`)
               != h.icon('pencil')
       h2.title
        a(href=`/post/${store.slug}`) #{store.name}
