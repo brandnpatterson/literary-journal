@@ -544,6 +544,7 @@ label {
     outline: 0;
     border: 0; }
   .search__result {
+    position: absolute;
     padding: 10px;
     display: block;
     border-bottom: 1px solid #303030; }
