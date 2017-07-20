@@ -1,11 +1,15 @@
 mixin registerKnightForm()
-  form.form(action='/register-knight' method='POST')
-    label(for='name') Name
-    input(type='text' name='name')
-    label(for='email') Email
-    input(type='text' name='email')
-    label(for='password') Password
-    input(type='password' name='password')
-    label(for='password-confirm') Confirm Password
-    input(type='password' name='password-confirm')
+  form.form.form-register(action='/register-knight' method='POST')
+    .form-group
+      input.name-register(type='text' name='name')
+      p
+    .form-group
+      input.email-register(type='text' name='email')
+      p
+    .form-group
+      input.password-register(type='password' name='password')
+      p
+    .form-group
+      input.password-register-confirm(type='password' name='password-confirm')
+      p
     input.button(type='submit' value='Register')

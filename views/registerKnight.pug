@@ -4,6 +4,6 @@ include mixins/registerKnightForm
 
 block content
   .inner
-    if user && user.level > 10
+    if user && user.level === 20
       h2= title
       +registerKnightForm()
