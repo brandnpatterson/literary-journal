@@ -614,8 +614,8 @@ label {
   list-style: none;
   margin: 0;
   padding: 0;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background: white; }
   .nav__section {
     display: -ms-flexbox;
