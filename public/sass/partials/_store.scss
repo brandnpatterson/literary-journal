@@ -2,6 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  p {
+    font-size: 14px;
+  }
 }
 
 .store {
@@ -18,16 +21,25 @@
   &__featured {
     position: relative;
     background: white;
-    height: contain;
-    padding: 50px 0 0;
+    padding: 50px 50px 0;
     margin: 10px 0;
-    height: 300px;
-    width: 51%;
+    height: 350px;
+    width: 80%;
     box-shadow: $shad;
+    .store__details {
+      padding: 2rem;
+      p {
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+    }
     @media all and (max-width: 850px) {
+      height: 400px;
+      padding: 50px 0 0;
       width: 48%;
     }
     @media all and (max-width: 550px) {
+      padding: 50px 0 0;
       width: 100%;
     }
   }
@@ -79,16 +91,6 @@
   position: relative;
   padding: 0 10px 0 10px;
   text-align: right;
-  img {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    position: absolute;
-    left: 0;
-    object-fit: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  }
 }
 
 .approved {

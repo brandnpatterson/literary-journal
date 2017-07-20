@@ -52,7 +52,7 @@ exports.getFeatured = async (req, res) => {
     return;
   }
   res.render('featured', {
-    title: 'Literary Journal',
+    title: 'Desmorious',
     stores, page, pages, count
   });
 };
@@ -67,7 +67,7 @@ exports.createStore = async (req, res) => {
   const store = await (new Store(req.body)).save();
   await store.save();
   req.flash('success', `Successfully Created ${store.name}.`);
-  res.redirect(`/store/${store.slug}`);
+  res.redirect(`/post/${store.slug}`);
 };
 
 exports.editStore = async (req, res) => {
@@ -91,8 +91,8 @@ exports.updateStore = async (req, res) => {
     new: true,
     runValidators: true
   }).exec();
-  req.flash('success', `Successfully updated <strong>${store.name}</strong>. <a href='/store/${store.slug}'>View Store</a>`);
-  res.redirect(`/stores/${store._id}/edit`);
+  req.flash('success', `Successfully updated <strong>${store.name}</strong>. <a href='/post/${store.slug}'>View Post</a>`);
+  res.redirect(`/posts/${store._id}/edit`);
 };
 
 exports.getStoreBySlug = async (req, res, next) => {

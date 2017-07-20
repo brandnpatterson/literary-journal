@@ -9,7 +9,7 @@ mixin storeCard(store = {})
       h2.title
        a(href=`/post/${store.slug}`) #{store.name}
     .store__details
-      p= store.description.split(' ').slice(0, 10).join(' ')
+      p= store.description.split(' ').slice(0, 100).join(' ')
       a.read-more(href=`/post/${store.slug}`) Read More
       if user && user.level === 20
         if store.tags.includes('Approved')

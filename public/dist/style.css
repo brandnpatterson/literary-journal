@@ -454,11 +454,9 @@ p {
   position: relative;
   z-index: 2;
   margin: 0;
-  font-size: 30px;
+  font-size: 20px;
   z-index: 2;
   line-height: 1.1;
-  -ms-transform: skew(0, -3deg);
-      transform: skew(0, -3deg);
   line-height: 1.1; }
   .title--long {
     font-size: 20px; }
@@ -720,6 +718,8 @@ label {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
+  .stores p {
+    font-size: 14px; }
 
 .store {
   position: relative;
@@ -734,17 +734,24 @@ label {
   .store__featured {
     position: relative;
     background: white;
-    height: contain;
-    padding: 50px 0 0;
+    padding: 50px 50px 0;
     margin: 10px 0;
-    height: 300px;
-    width: 51%;
+    height: 350px;
+    width: 80%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05); }
+    .store__featured .store__details {
+      padding: 2rem; }
+      .store__featured .store__details p {
+        line-height: 1.2;
+        margin-bottom: 0; }
     @media all and (max-width: 850px) {
       .store__featured {
+        height: 400px;
+        padding: 50px 0 0;
         width: 48%; } }
     @media all and (max-width: 550px) {
       .store__featured {
+        padding: 50px 0 0;
         width: 100%; } }
   .store__details {
     padding: 2rem; }
@@ -788,16 +795,6 @@ label {
   position: relative;
   padding: 0 10px 0 10px;
   text-align: right; }
-  .store__hero img {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    position: absolute;
-    left: 0;
-    object-fit: cover;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
 
 .approved {
   position: absolute;
