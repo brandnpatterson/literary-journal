@@ -561,8 +561,8 @@ label {
     width: 50%; }
     .search__result {
       background: white;
-      position: absolute;
-      left: 0; } }
+      position: fixed;
+      left: 100px; } }
 
 @keyframes slideIn {
   0% {

@@ -40,8 +40,8 @@
     width: 50%;
     &__result {
       background: white;
-      position: absolute;
-      left: 0;
+      position: fixed;
+      left: 100px;
     }
   }
 }
