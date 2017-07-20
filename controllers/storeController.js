@@ -20,7 +20,7 @@ exports.getStores = async (req, res) => {
 
   if (!stores.length && skip) {
     req.flash('info', `Hey! You asked for page ${page}. The last one is page ${pages}`);
-    res.redirect(`/stores/page/${pages}`);
+    res.redirect(`/posts/page/${pages}`);
     return;
   }
   res.render('posts', {
@@ -48,7 +48,7 @@ exports.getFeatured = async (req, res) => {
 
   if (!stores.length && skip) {
     req.flash('info', `Hey! You asked for page ${page}. The last one is page ${pages}`);
-    res.redirect(`/stores/page/${pages}`);
+    res.redirect(`/posts/page/${pages}`);
     return;
   }
   res.render('featured', {

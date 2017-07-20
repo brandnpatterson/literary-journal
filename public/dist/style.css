@@ -544,6 +544,7 @@ label {
     outline: 0;
     border: 0; }
   .search__result {
+    background: white;
     position: absolute;
     padding: 10px;
     display: block;
@@ -554,6 +555,14 @@ label {
 @media all and (max-width: 900px) {
   .search {
     width: 50%; } }
+
+@media all and (max-width: 600px) {
+  .search {
+    width: 50%; }
+    .search__result {
+      background: white;
+      position: absolute;
+      left: 0; } }
 
 @keyframes slideIn {
   0% {

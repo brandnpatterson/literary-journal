@@ -1143,7 +1143,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function searchResultsHTML(stores) {
   return stores.map(function (store) {
-    return '\n      <a href=\'/store/' + store.slug + '\' class=\'search__result\'>\n        <strong>' + store.name + '</strong>\n      </a>\n    ';
+    return '\n      <a href=\'/post/' + store.slug + '\' class=\'search__result\'>\n        <strong>' + store.name + '</strong>\n      </a>\n    ';
   }).join('');
 };
 
