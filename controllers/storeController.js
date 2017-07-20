@@ -52,7 +52,7 @@ exports.getFeatured = async (req, res) => {
     return;
   }
   res.render('featured', {
-    title: 'Desmorious',
+    title: 'Literary Journal',
     stores, page, pages, count
   });
 };
