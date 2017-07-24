@@ -595,12 +595,23 @@ input, textarea {
   padding: 20px 0;
   margin: 10px 0;
   width: 30%; }
-  .store__featured {
+  .store__featured--flex {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
         flex-direction: row;
-    border: 1px solid red; }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-align: center;
+        align-items: center;
+    border: 1px solid red;
+    height: 100px;
+    max-width: 80%;
+    margin: 0 auto; }
+    .store__featured--flex .author {
+      font-style: italic; }
   .store--wide {
     width: 100%; }
   .store__details {

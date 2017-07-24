@@ -11,10 +11,19 @@
   padding: 20px 0;
   margin: 10px 0;
   width: 30%;
-  &__featured {
+  &__featured--flex {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     border: 1px solid red;
+    height: 100px;
+    max-width: 80%;
+    margin: 0 auto;
+    .author {
+      font-style: italic;
+    }
   }
   &--wide {
     width: 100%;
