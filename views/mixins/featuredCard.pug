@@ -1,16 +1,6 @@
 mixin storeCard(store = {})
   .store__featured
-    .store__hero
-      if user && user.level === 20
-        .store__actions
-          .store__action.store__action--edit
-            a(href=`/posts/${store._id}/edit`)
-              != h.icon('pencil')
-      h2.title
-       a(href=`/post/${store.slug}`) #{store.name}
-    .store__details
-      p= store.description.split(' ').slice(0, 100).join(' ')
-      a.read-more(href=`/post/${store.slug}`) Read More
-      if user && user.level === 20
-        if store.tags.includes('Approved')
-          p.approved= store.tags[0]
+    h2.title
+    .flex-container
+      a(href =`/post/${store.slug}`) #{store.name}
+      p #{store.author}

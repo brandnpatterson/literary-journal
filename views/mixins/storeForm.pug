@@ -2,6 +2,8 @@ mixin storeForm(store = {})
   form.card(action=`/add/${store._id || ''}` method='POST')
     label(for='name') Name
     input(type='text' name='name' value=store.name)
+    label(for='name') Author
+    input(type='text' name='author' value=store.author)
     label(for='description') Description
     textarea(name='description')= store.description
     - const tags = store.tags || []

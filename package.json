@@ -9,7 +9,7 @@
   "scripts": {
     "assets": "webpack -w --display-max-modules 0",
     "prod": "node ./start.js",
-    "watch": "nodemon ./start.js --ignore public/",
+    "watch": "nodemon -e .pug ./start.js --ignore public/",
     "start": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
     "deploy": "git push heroku master"
   },

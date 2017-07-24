@@ -4,8 +4,8 @@ include mixins/featuredCard
 
 block content
   .inner
-    h2= h.siteName
-    .stores
+    h2 Table of Contents
+    .stores__featured
       each store in stores
         if user && user.level === 20
           +storeCard(store)

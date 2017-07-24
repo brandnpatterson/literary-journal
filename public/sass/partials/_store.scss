@@ -2,9 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  p {
-    font-size: 14px;
-  }
 }
 
 .store {
@@ -14,34 +11,13 @@
   padding: 20px 0;
   margin: 10px 0;
   width: 30%;
-  box-shadow: $shad;
+  &__featured {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+  }
   &--wide {
     width: 100%;
-  }
-  &__featured {
-    position: relative;
-    background: white;
-    padding: 50px 50px 0;
-    margin: 10px 0;
-    height: 350px;
-    width: 80%;
-    box-shadow: $shad;
-    .store__details {
-      padding: 2rem;
-      p {
-        line-height: 1.2;
-        margin-bottom: 0;
-      }
-    }
-    @media all and (max-width: 850px) {
-      height: 400px;
-      padding: 50px 0 0;
-      width: 48%;
-    }
-    @media all and (max-width: 550px) {
-      padding: 50px 0 0;
-      width: 100%;
-    }
   }
   &__details {
     padding: 2rem;
