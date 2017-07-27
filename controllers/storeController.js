@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Store = mongoose.model('Store');
 
+// getStores
 exports.getStores = async (req, res) => {
   const page = req.params.page || 1;
   const limit = 6;
@@ -29,6 +30,7 @@ exports.getStores = async (req, res) => {
   });
 };
 
+// getFeaturedStores
 exports.getFeatured = async (req, res) => {
   const page = req.params.page || 1;
   const limit = 6;
@@ -57,12 +59,14 @@ exports.getFeatured = async (req, res) => {
   });
 };
 
+// addStore
 exports.addStore = (req, res) => {
   res.render('editStore', {
     title: 'Add Store'
   });
 };
 
+// createStore
 exports.createStore = async (req, res) => {
   const store = await (new Store(req.body)).save();
   await store.save();
@@ -70,6 +74,7 @@ exports.createStore = async (req, res) => {
   res.redirect(`/post/${store.slug}`);
 };
 
+// editStore
 exports.editStore = async (req, res) => {
   const store = await Store.findOne({
     _id: req.params.id
@@ -80,6 +85,7 @@ exports.editStore = async (req, res) => {
   });
 };
 
+// updateStore
 exports.updateStore = async (req, res) => {
   // find and update store
   const store = await Store.findOneAndUpdate({
@@ -95,6 +101,7 @@ exports.updateStore = async (req, res) => {
   res.redirect(`/posts/${store._id}/edit`);
 };
 
+// getStoreBySlug
 exports.getStoreBySlug = async (req, res, next) => {
   const store = await Store.findOne({
     slug: req.params.slug
@@ -106,6 +113,7 @@ exports.getStoreBySlug = async (req, res, next) => {
   });
 };
 
+// getStoreBySlug
 exports.getStoresByTag = async (req, res, next) => {
   // get a list of all the stores
   const tagsPromise = Store.getTagsList();
@@ -127,6 +135,7 @@ exports.getStoresByTag = async (req, res, next) => {
   });
 };
 
+// searchStores
 exports.searchStores = async (req, res) => {
   const stores = await Store
   // find stores that match

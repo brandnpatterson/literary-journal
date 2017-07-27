@@ -5,6 +5,7 @@ const User = mongoose.model('User');
 const promisify = require('es6-promisify');
 const mail = require('../handlers/mail');
 
+// login
 exports.login = passport.authenticate('local', {
   failureRedirect: '/login',
   failureFlash: 'Failed Login',
@@ -12,12 +13,14 @@ exports.login = passport.authenticate('local', {
   successFlash: 'You are now logged in!'
 });
 
+// logout
 exports.logout = (req, res) => {
   req.logout();
   req.flash('success', 'You are now logged out!');
   res.redirect('/');
 };
 
+// isLoggedIn
 exports.isLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) {
     return next();
@@ -26,6 +29,7 @@ exports.isLoggedIn = (req, res, next) => {
   res.redirect('/login');
 };
 
+// forgot
 exports.forgot = async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
 
@@ -51,6 +55,7 @@ exports.forgot = async (req, res) => {
   }
 };
 
+// reset
 exports.reset = async (req, res) => {
   const user = await User.findOne({
     resetPasswordToken: req.params.token,
@@ -65,6 +70,7 @@ exports.reset = async (req, res) => {
   });
 };
 
+// confirmedPasswords
 exports.confirmedPasswords = (req, res, next) => {
   if (req.body.password === req.body['password-confirm']) {
     return next();
@@ -73,6 +79,7 @@ exports.confirmedPasswords = (req, res, next) => {
   res.redirect('back');
 };
 
+// update
 exports.update = async (req, res) => {
   const user = await User.findOne({
     resetPasswordToken: req.params.token,

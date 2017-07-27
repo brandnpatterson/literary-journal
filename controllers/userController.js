@@ -2,18 +2,21 @@ const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const promisify = require('es6-promisify');
 
+// loginForm
 exports.loginForm = (req, res) => {
   res.render('login', {
     title: 'Login'
   });
 };
 
+// registerForm
 exports.registerForm = (req, res) => {
   res.render('register', {
     title: 'Register'
   });
 };
 
+// validateRegister
 exports.validateRegister = (req, res, next) => {
   req.sanitizeBody('name');
   req.checkBody('name', 'Must supply a name for your account').notEmpty();
@@ -41,6 +44,7 @@ exports.validateRegister = (req, res, next) => {
   next();
 };
 
+// register
 exports.register = async (req, res, next) => {
   const user = new User({
     email: req.body.email,
@@ -52,12 +56,14 @@ exports.register = async (req, res, next) => {
   next();
 };
 
+// account
 exports.account = (req, res) => {
   res.render('account', {
     title: 'Edit Your Account'
   });
 }
 
+// updateAccount
 exports.updateAccount = async (req, res) => {
   const updates = {
     name: req.body.name,
@@ -72,12 +78,14 @@ exports.updateAccount = async (req, res) => {
   res.redirect('/account');
 };
 
+// registerKnightForm
 exports.registerKnightForm = (req, res) => {
   res.render('registerKnight', {
     title: 'Register Knight'
   });
 };
 
+// registerKnight
 exports.registerKnight = async (req, res, next) => {
   const user = new User({
     email: req.body.email,
