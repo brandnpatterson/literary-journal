@@ -1,7 +1,7 @@
 mixin forgotForm()
-  form.form.form-register(action='/account/forgot' method='POST')
+  form.register-form(action='/account/forgot' method='POST')
     h2 I forgot my password!
-    .form-group
-      input.email-register(type='text' name='email')
+    fieldset
+      input.register-email(type='text' name='email')
       p
     input.button(type='submit' value='Send a Reset') 

@@ -13,12 +13,11 @@ var auth = {
     placeholders.init(this.requiredRegister);
   },
   cacheDOM: function () {
-    this.formRegister = document.querySelector('.form-register');
-    this.failEmail  = document.querySelector('.input-fail-email');
-    var nameRegister = document.querySelector('.name-register');
-    var emailRegister = document.querySelector('.email-register');
-    var passRegister  = document.querySelector('.password-register');
-    var passRegisterConfirm  = document.querySelector('.password-register-confirm');
+    this.formRegister = document.querySelector('.register-form');
+    var nameRegister = document.querySelector('.register-name');
+    var emailRegister = document.querySelector('.register-email');
+    var passRegister  = document.querySelector('.register-password');
+    var passRegisterConfirm  = document.querySelector('.register-password-confirm');
     this.requiredRegister = [
       emailRegister,
       passRegister,

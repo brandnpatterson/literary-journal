@@ -3,7 +3,7 @@
 */
 
 // formData used to match user input for validation
-import formData from '../form-data';
+import formData from '../data/form-data';
 
 var validation = module.exports = {
   liveValidation: function (requiredInputs) {

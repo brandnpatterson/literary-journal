@@ -5,20 +5,20 @@ require('dotenv').config({
   path: 'variables.env'
 });
 
-// Connect to our Database and handle an bad connections
+// connect to database
 mongoose.connect(process.env.DATABASE);
-mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
+mongoose.Promise = global.Promise; // tell Mongoose to use ES6 promises
 mongoose.connection.on('error', (err) => {
-  console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
+  console.error(`${err.message}`);
 });
 
 // Require models
 require('./models/Store');
 require('./models/User');
 
-// Start!
+// start
 const app = require('./app');
-app.set('port', process.env.PORT || 8888);
+app.set('port', process.env.PORT || 7777);
 const server = app.listen(app.get('port'), () => {
   console.log(`Express server running on PORT ${server.address().port}`);
 });

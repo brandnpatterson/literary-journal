@@ -7,11 +7,9 @@
     "npm": "4.2.0"
   },
   "scripts": {
-    "assets": "webpack -w --display-max-modules 0",
-    "prod": "node ./start.js",
-    "watch": "nodemon -e .pug ./start.js --ignore public/",
-    "start": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
-    "deploy": "git push heroku master"
+    "deploy": "webpack -p && git push heroku master && git push",
+    "prod": "webpack -p",
+    "start": "webpack -w & gulp"
   },
   "browserslist": "last 2 versions",
   "dependencies": {
@@ -36,6 +34,7 @@
     "mongoose": "4.8.7",
     "mongoose-mongodb-errors": "0.0.2",
     "nodemailer": "3.1.5",
+    "normalize.css": "^7.0.0",
     "passport": "0.3.2",
     "passport-local": "1.0.0",
     "passport-local-mongoose": "4.0.0",
@@ -48,12 +47,13 @@
     "autoprefixer": "6.7.7",
     "babel-core": "6.24.0",
     "babel-loader": "6.4.0",
-    "babel-preset-es2015": "6.24.0",
-    "concurrently": "3.4.0",
+    "babel-preset-latest": "^6.16.0",
+    "browser-sync": "^2.18.8",
     "css-loader": "0.27.3",
     "extract-text-webpack-plugin": "2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
     "node-sass": "4.5.0",
-    "nodemon": "1.11.0",
     "postcss-loader": "1.3.3",
     "sass-loader": "6.0.3",
     "webpack": "2.2.1"

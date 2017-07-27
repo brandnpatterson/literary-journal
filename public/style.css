@@ -1,0 +1,20 @@
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  nav .nav-section {
+    display: flex; }
+    nav .nav-section li {
+      margin: 20px 10px 0; }
+
+.avatar {
+  border-radius: 50%;
+  width: 50px; }
+
+/*# sourceMappingURL=style.css.map*/

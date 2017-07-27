@@ -13,10 +13,9 @@ var auth = {
     placeholders.init(this.requiredLogIn);
   },
   cacheDOM: function () {
-    this.formLogIn = document.querySelector('.form-log-in');
-    this.failEmail  = document.querySelector('.input-fail-email');
-    var emailLogIn = document.querySelector('.email-log-in');
-    var passLogIn  = document.querySelector('.password-log-in');
+    this.formLogIn = document.querySelector('.login-form');
+    var emailLogIn = document.querySelector('.login-email');
+    var passLogIn  = document.querySelector('.login-password');
     this.requiredLogIn = [
       emailLogIn,
       passLogIn

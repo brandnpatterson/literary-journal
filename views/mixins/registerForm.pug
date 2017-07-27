@@ -1,15 +1,15 @@
 mixin registerForm()
-  form.form.form-register(action='/register' method='POST')
-    .form-group
-      input.name-register(type='text' name='name')
+  form.register-form(action='/register' method='POST')
+    fieldset
+      input.register-name(type='text' name='name')
       p
-    .form-group
-      input.email-register(type='text' name='email')
+    fieldset
+      input.register-email(type='text' name='email')
       p
-    .form-group
-      input.password-register(type='password' name='password')
+    fieldset
+      input.register-password(type='password' name='password')
       p
-    .form-group
-      input.password-register-confirm(type='password' name='password-confirm')
+    fieldset
+      input.register-password-confirm(type='password' name='password-confirm')
       p
     input.button(type='submit' value='Register')

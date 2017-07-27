@@ -22,5 +22,5 @@ var formData = module.exports = {
     {
       placeholder: 'name'
     },
-  ],
+  ]
 }

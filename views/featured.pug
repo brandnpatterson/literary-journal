@@ -5,7 +5,7 @@ include mixins/featuredCard
 block content
   .inner
     h2 Table of Contents
-    .stores__featured
+    div
       each store in stores
         if user && user.level === 20
           +storeCard(store)

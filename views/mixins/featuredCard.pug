@@ -1,7 +1,7 @@
 mixin storeCard(store = {})
-  .store__featured
-    h2.title
-    .store__featured--flex
+  div
+    h2
+    div
       p
         a.piece-title(href =`/post/${store.slug}`) #{store.name}
       p.author #{store.author}

@@ -2,7 +2,7 @@
   Set initial placeholders for inputs
 */
 
-import formData from '../form-data';
+import formData from '../data/form-data';
 
 var placeholders = module.exports = {
   // set initial input placeholder values
