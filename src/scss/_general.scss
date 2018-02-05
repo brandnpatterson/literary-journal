@@ -1,0 +1,93 @@
+$medium: 'screen and (min-width: 768px)';
+$large:  'screen and (min-width : 1040px)';
+
+// general
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .nav-section {
+    display: flex;
+    li {
+      margin: 20px 10px 0;
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+}
+
+// promotion
+.gutter {
+  height: 2px;
+  margin: 35px auto;
+  background: #ccc;
+  width: 100%;
+  @media #{$medium} {
+    width: 98%;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  .logo-runebeard {
+    margin-left: -30px;
+    @media #{$medium} {
+      display: block;
+      margin: 0 auto;
+      width: 500px;
+    }
+  }
+}
+
+.container .main-text {
+  display: flex;
+  flex-direction: column;
+  a:hover {
+    color: lightblue;
+  }
+  @media #{$medium} {
+    flex-direction: row;
+    .title {
+      font-size: 45px;
+      margin-top: 30px;
+      text-align: center;
+      width: 50%;
+    }
+    h3 {
+      width: 50%;
+    }
+  }
+  @media #{$large} {
+    .title {
+      font-size: 50px;
+    }
+  }
+}
+
+// tiles
+.tile {
+  .is-parent,
+  .is-child {
+      box-shadow: none !important;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .tile-wide
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}

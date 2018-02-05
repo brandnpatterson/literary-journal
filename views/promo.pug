@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    title= `${title} | ${h.siteName}`
+    link(rel='stylesheet', href='/normalize.css')
+    link(rel='stylesheet', href='/style.css')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+  body
+    block content
+      .inner
+        .container
+          img.logo-runebeard(src='images/runebeard.jpg')
+          .gutter
+          .main-text
+            h2.title=h.siteName
+            h3
+              strong Desmond White 
+              | and 
+              strong Stuart Warren:
+              br
+              | These adventurers are in need of brave (or not so brave) orks or 'umans to scribble with quills and join together and share each tale! This they've called Rune Beard.
+              |
+              br
+              a(href='#0') Email us here with your story.
+          .gutter
+        .container
+          .tile.is-ancestor
+            .tile.is-parent.is-8
+              article.tile.is-child.box
+                p.title The rules of joining are simple:
+                .content
+                  ul
+                    li 1. E-mail your story to our team and stuff bla bla bla E-mail your story to our team and stuff bla bla bla E-mail your story to our team and stuff bla bla bla
+                    li 2. Wait for story to be approved Wait for story to be approved Wait for story to be approved Wait for story to be approved Wait for story to be approved Wait for story to be approved
+                    li 3. Share with your friends Share with your friends Share with your friends Share with your friends Share with your friends Share with your friends Share with your friends Share with your friends Share with your friends
+            .tile
+              .tile.is-parent.is-vertical
+                article.tile.is-child.box
+                  img(src='images/bear.jpg')
+                article.tile.is-child.box
+                  .gutter
+                  p email us with your story at
+                  |
+                  a(href='#0') test@email.com
+      footer.footer
+        .container
+          .content.has-text-centered
+            p
+              strong Development
+              |  by 
+              a(href='https://brandnpatterson.com') Brandon Patterson
+
+
+    block scripts
+      script(src='/App.bundle.js')
+
+//- Desmond White and Stuart Warren are adventurers from the fifth quadrent and have been in hiding in the gallows for the last year or so. Today they've decided to reveal themselves and confront you with a plea: They are in need of brave (or not so brave) orks or 'umans to scribble with quills and join together and share each tale! This cause they've called "Rune Beard". Are you prepared to join their cause? 

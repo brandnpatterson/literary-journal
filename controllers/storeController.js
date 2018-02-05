@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 const Store = mongoose.model('Store');
 
+// promotion
+exports.promotion = (req, res) => {
+  res.render('promo', {
+    title: 'Promotion'
+  });
+}
+
 // getStores
 exports.getStores = async (req, res) => {
   const page = req.params.page || 1;
