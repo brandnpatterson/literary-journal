@@ -1,1 +1,1 @@
-# Rune Bear
+# Rune Bear Weekly
