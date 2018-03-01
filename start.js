@@ -23,5 +23,4 @@ const server = app.listen(app.get('port'), () => {
   console.log(`Express server running on PORT ${server.address().port}`);
 });
 
-// temporary
 require('./handlers/mail');
