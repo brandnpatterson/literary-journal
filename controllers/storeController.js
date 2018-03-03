@@ -61,7 +61,7 @@ exports.getFeatured = async (req, res) => {
     return;
   }
   res.render('featured', {
-    title: 'Literary Journal',
+    title: 'Rune Bear',
     stores, page, pages, count
   });
 };

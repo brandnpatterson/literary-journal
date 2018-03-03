@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
@@ -8,7 +9,7 @@ const javascript = {
   use: [{
     loader: 'babel-loader',
     options: {
-      presets: 'es2015'
+      presets: 'env'
     }
   }],
 };
@@ -53,7 +54,12 @@ const config = {
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
-    uglify
+    uglify,
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      proxy: 'localhost:7777',
+      port: 3000
+    })
   ]
 };
 process.noDeprecation = true;

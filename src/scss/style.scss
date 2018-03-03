@@ -1,2 +1,5 @@
-@import '~foundation-sites/scss/foundation';
-@include foundation-everything;
+@import '~bulma/bulma';
+
+.navbar {
+    border: 1px solid blue;
+}

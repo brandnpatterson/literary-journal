@@ -7,29 +7,32 @@ html
   body
     block header
       header
-        nav
-          .nav-section
-            li.nav-item
-              a.nav-link(href='/') Literary Journal
+        nav.navbar(role='navigation' aria-label='main navigation')
+          .navbar-burger
+            span
+            span
+            span
+          .navbar-menu
+            .navbar-item
+              a(href='/') Bob
             if !user
                 each item in h.menu
-                  li.nav-item
-                    a.nav-link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav-link--active' : ''))
+                  .navbar-item
+                    a(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'navbar-link--active' : ''))
                       span #{item.title}
             else
               each item in h.menuUser
-                li.nav-item
-                  a.nav-link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav-link--active' : ''))
+                .navbar-item
+                  a(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'navbar-link--active' : ''))
                     span #{item.title}
-          .nav-section
             if user
-              li.nav-item: a.nav-link(href='/logout', class=(currentPath.startsWith('/logout') ? 'nav-link--active' : ''))
+              .navbar-item: a(href='/logout', class=(currentPath.startsWith('/logout') ? 'navbar-link--active' : ''))
                 span Logout
-              li.nav-item: a.nav-link(href='/account', class=(currentPath.startsWith('/account') ? 'nav-link--active' : ''))
+              .navbar-item: a(href='/account', class=(currentPath.startsWith('/account') ? 'navbar-link--active' : ''))
                 img.avatar(src=user.gravatar + 'd=retro')  
             else
-              li.nav-item: a.nav-link(href='/register', class=(currentPath.startsWith('/register') ? 'nav-link--active' : '')) Register
-              li.nav-item: a.nav-link(href='/login', class=(currentPath.startsWith('/login') ? 'nav-link--active' : '')) Log In
+              .navbar-item: a(href='/register', class=(currentPath.startsWith('/register') ? 'navbar-link--active' : '')) Register
+              .navbar-item: a(href='/login', class=(currentPath.startsWith('/login') ? 'navbar-link--active' : '')) Log In
     block messages
       if locals.flashes
         .inner
