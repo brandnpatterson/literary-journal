@@ -9,7 +9,7 @@ const { catchErrors } = require('../handlers/errorHandlers');
 router.get('/promo', storeController.promotion);
 
 // landing
-router.get('/', catchErrors(storeController.getStores));
+router.get('/', catchErrors(storeController.getFeatured));
 
 router.get('/posts', catchErrors(storeController.getStores));
 router.get('/posts/:page', catchErrors(storeController.getStores));

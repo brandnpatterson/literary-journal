@@ -1,0 +1,27 @@
+.featured__hero
+  display: flex
+  align-items: center
+  justify-content: space-around
+  margin: 0 auto 30px
+  width: 85%
+
+  @media #{$medium-up}
+    flex-direction: row-reverse
+
+  img
+    width: 150px
+    height: 150px
+    @media #{$medium-up}
+      width: 45%
+      height: 45%
+    &:nth-of-type(1)
+      display: none
+      @media #{$medium-up}
+        display: block 
+
+.featured__subtitle
+  font-size: 16px
+  width: 100%
+  @media #{$medium-up}
+    font-size: 18px
+    width: 550px

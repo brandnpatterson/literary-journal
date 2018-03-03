@@ -26,7 +26,7 @@ const postcss = {
 };
 
 const styles = {
-  test: /\.(scss)$/,
+  test: /\.(sass)$/,
   // here we pass the options as query params b/c it's short.
   // remember above we used an object for each loader instead of just a string?
   // We don't just pass an array of loaders, we run them through the extract plugin so they can be outputted to their own .css file
@@ -58,7 +58,11 @@ const config = {
     new BrowserSyncPlugin({
       host: 'localhost',
       proxy: 'localhost:7777',
-      port: 3000
+      port: 3000,
+      notify: false
+    },
+    {
+      injectCss: true
     })
   ]
 };

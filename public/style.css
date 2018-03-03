@@ -6504,24 +6504,81 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
-.navbar-menu {
-  align-items: center;
-  justify-content: center; }
-  .navbar-menu a {
-    color: #bfbfbf;
-    font-size: 25px;
-    font-family: serif; }
+.navbar {
+  margin-bottom: 50px; }
+
+.navbar a {
+  color: #bfbfbf;
+  font-size: 25px;
+  font-family: serif; }
+
+.navbar-burger.is-active {
+  position: relative;
+  z-index: 10; }
+  .navbar-burger.is-active span {
+    background: #bfbfbf; }
+
+#navMenu.is-active {
+  position: relative;
+  padding-top: 20px;
+  top: -50px; }
+
+.navbar-brand a img.is-active {
+  position: absolute;
+  z-index: 1; }
 
 footer {
-  height: 250px; }
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media screen and (min-width: 64em) {
+    footer {
+      height: 250px;
+      display: block; } }
   footer span {
     font-weight: bold; }
   footer p {
     color: #bfbfbf;
-    font-size: 18px;
-    width: 530px;
-    text-align: center;
-    padding: 4% 0 0 4%; }
+    padding: 30px 0 0 10px;
+    font-size: 14px;
+    width: 400px; }
+    @media screen and (min-width: 64em) {
+      footer p {
+        padding: 4% 0 0 4%;
+        font-size: 18px;
+        text-align: center;
+        width: 530px; } }
+
+.featured__hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto 30px;
+  width: 85%; }
+  @media screen and (min-width: 64em) {
+    .featured__hero {
+      flex-direction: row-reverse; } }
+  .featured__hero img {
+    width: 150px;
+    height: 150px; }
+    @media screen and (min-width: 64em) {
+      .featured__hero img {
+        width: 45%;
+        height: 45%; } }
+    .featured__hero img:nth-of-type(1) {
+      display: none; }
+      @media screen and (min-width: 64em) {
+        .featured__hero img:nth-of-type(1) {
+          display: block; } }
+
+.featured__subtitle {
+  font-size: 16px;
+  width: 100%; }
+  @media screen and (min-width: 64em) {
+    .featured__subtitle {
+      font-size: 18px;
+      width: 550px; } }
 
 footer,
 .navbar-menu {
@@ -6533,5 +6590,13 @@ footer,
 .store__action--edit svg {
   width: 30px;
   height: 30px; }
+
+.center {
+  margin: 0 auto;
+  text-align: center; }
+
+@media screen and (min-width: 64em) {
+  .small-only {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map*/
