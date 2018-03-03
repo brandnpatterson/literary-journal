@@ -6504,7 +6504,34 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
-.navbar {
-  border: 1px solid blue; }
+.navbar-menu {
+  align-items: center;
+  justify-content: center; }
+  .navbar-menu a {
+    color: #bfbfbf;
+    font-size: 25px;
+    font-family: serif; }
+
+footer {
+  height: 250px; }
+  footer span {
+    font-weight: bold; }
+  footer p {
+    color: #bfbfbf;
+    font-size: 18px;
+    width: 530px;
+    text-align: center;
+    padding: 4% 0 0 4%; }
+
+footer,
+.navbar-menu {
+  background: #333333; }
+
+.content {
+  min-height: 600px; }
+
+.store__action--edit svg {
+  width: 30px;
+  height: 30px; }
 
 /*# sourceMappingURL=style.css.map*/

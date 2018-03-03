@@ -18,17 +18,17 @@ exports.staticMap = ([lng, lat]) => `https://maps.googleapis.com/maps/api/static
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 
 // Some details about the site
-exports.siteName = `Rune Bear`;
+exports.siteName = 'Rune Bear';
 
 exports.menu = [
-  { slug: '/posts', title: 'Posts' },
-  { slug: '/tags', title: 'Tags' }
+  { slug: '/posts', title: 'POSTS' },
+  { slug: '/tags', title: 'TAGS' }
 ];
 
 exports.menuUser = [
-  { slug: '/posts', title: 'Posts' },
-  { slug: '/tags', title: 'Tags' },
-  { slug: '/add', title: 'Add' }
+  { slug: '/posts', title: 'POSTS' },
+  { slug: '/tags', title: 'TAGS' },
+  { slug: '/add', title: 'ADD' }
 ];
 
 exports.choicesKnight = [

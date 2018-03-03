@@ -8,6 +8,7 @@ mixin storeCard(store = {})
               != h.icon('pencil')
       h2.title
        a(href=`/post/${store.slug}`) #{store.name}
+       p= store.author
     .store__details
       p= store.description.split(' ').slice(0, 10).join(' ')
       a.read-more(href=`/post/${store.slug}`) Read More

@@ -14,7 +14,7 @@ html
             span
           .navbar-menu
             .navbar-item
-              a(href='/') Bob
+              a(href='/') RUNEBEAR
             if !user
                 each item in h.menu
                   .navbar-item
@@ -27,12 +27,12 @@ html
                     span #{item.title}
             if user
               .navbar-item: a(href='/logout', class=(currentPath.startsWith('/logout') ? 'navbar-link--active' : ''))
-                span Logout
+                span LOGOUT
               .navbar-item: a(href='/account', class=(currentPath.startsWith('/account') ? 'navbar-link--active' : ''))
-                img.avatar(src=user.gravatar + 'd=retro')  
+                span ACCOUNT 
             else
-              .navbar-item: a(href='/register', class=(currentPath.startsWith('/register') ? 'navbar-link--active' : '')) Register
-              .navbar-item: a(href='/login', class=(currentPath.startsWith('/login') ? 'navbar-link--active' : '')) Log In
+              .navbar-item: a(href='/register', class=(currentPath.startsWith('/register') ? 'navbar-link--active' : '')) REGISTER
+              .navbar-item: a(href='/login', class=(currentPath.startsWith('/login') ? 'navbar-link--active' : '')) LOG IN
     block messages
       if locals.flashes
         .inner
@@ -47,6 +47,10 @@ html
       block content
         
     footer
+      p
+        span Rune Bear 
+        | is always looking for submissions from new and established writers. Check out our SUBMIT section for our rules and how to send your prose or poetry.
+      br
       a(href='http://brandnpatterson.com')
         p.copyright
           | &copy;
