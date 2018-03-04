@@ -1,24 +1,23 @@
 extends layout
 
-include mixins/tableOfContentsCard
 include mixins/storeCard
 include mixins/pagination
 
 block content
   .featured
-    .featured__header
-      .featured__hero
+    .featured-header
+      .featured-hero
         img.runebear-logo(src='images/runebear-logo.png')
         img.runebear-word(src='images/runebear-word.png')
-      p.featured__subtitle.center Rune Bear is a digital magazine dedicated to Strange, Surreal, Supernatural, and Speculative.
-    .gutter
-      div.gutter-inner
+      p.featured-subtitle.center Rune Bear is a digital magazine dedicated to Strange, Surreal, Supernatural, and Speculative.
+    .gutter-wrapper
+      .gutter
         p Have an account? 
         a.button.is-medium(href='/login') Log In
-      div.gutter-inner
+      .gutter
         p Want to join?
         a.button.is-medium(href='/register') Register
-    .featured__content
+    .featured-content
       .stores-wrapper
         h2.latest-stories Recent Posts
         .stores
@@ -28,12 +27,12 @@ block content
             else if !user || user.level === 10
               if store.tags.includes('Approved')
                 +storeCard(store)
-      .all-stores-wrapper
-        h2.table-of-contents Table of Contents
-        .all-stores
-          each store in allStores
-            if user && user.level === 20
-              +tableOfContentsCard(store)
-            else if !user || user.level === 10
-              if store.tags.includes('Approved')
-                +tableOfContentsCard(store)
+      //- .all-stores-wrapper
+      //-   h2.table-of-contents Table of Contents
+      //-   .all-stores
+      //-     each store in allStores
+      //-       if user && user.level === 20
+      //-         +tableOfContentsCard(store)
+      //-       else if !user || user.level === 10
+      //-         if store.tags.includes('Approved')
+      //-           +tableOfContentsCard(store)

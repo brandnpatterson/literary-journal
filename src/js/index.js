@@ -2,7 +2,7 @@
   Webpack entry point
 */
 
-import '../scss/style.sass';
+import '../scss/style.scss';
 
 import './hamburger.js';
 import './log-in.js';

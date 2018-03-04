@@ -26,7 +26,7 @@ const postcss = {
 };
 
 const styles = {
-  test: /\.(sass)$/,
+  test: /\.(scss)$/,
   // here we pass the options as query params b/c it's short.
   // remember above we used an object for each loader instead of just a string?
   // We don't just pass an array of loaders, we run them through the extract plugin so they can be outputted to their own .css file
