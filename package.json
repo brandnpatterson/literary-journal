@@ -7,7 +7,8 @@
     "npm": "5.6.0"
   },
   "scripts": {
-    "prod": "node ./start.js",
+    "deploy": "webpack -p && git push heroku master && git push",
+    "prod": "webpack -p",
     "watch": "nodemon ./start.js --ignore public/",
     "start": "concurrently \"npm run stylelint\" \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
     "assets": "webpack --watch --display-max-modules 0",
