@@ -10,14 +10,14 @@ mixin storeForm(store = {})
     ul.tags
       if user.level === 20
         each choice in h.choicesKnight
-          .tag.tag__choice
+          .tag.tag-choice
             input(type='checkbox' id=choice value=choice name='tags' 
               checked=(tags.includes(choice))
             )
             label(for=choice) #{choice}
       else
         each choice in h.choices
-          .tag.tag__choice
+          .tag.tag-choice
             input(type='checkbox' id=choice value=choice name='tags' 
               checked=(tags.includes(choice))
             )

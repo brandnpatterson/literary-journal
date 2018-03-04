@@ -6573,10 +6573,10 @@ footer .copyright {
   @media screen and (min-width: 64em) {
     .featured-hero img {
       height: 400px;
-      width: 400px; }
-      .featured-hero img:nth-of-type(1) {
-        display: none; } }
-    @media screen and (min-width: 64em) and (min-width: 64em) {
+      width: 400px; } }
+  .featured-hero img:nth-of-type(1) {
+    display: none; }
+    @media screen and (min-width: 64em) {
       .featured-hero img:nth-of-type(1) {
         display: block; } }
 
@@ -6598,11 +6598,12 @@ footer .copyright {
   text-align: center; }
 
 .gutter .button {
-  margin: 0 50px;
+  margin: 0 30px;
   transition: 1s background;
   width: 120px; }
   @media screen and (min-width: 64em) {
     .gutter .button {
+      margin: 0 100px;
       width: 150px; } }
   .gutter .button:hover {
     background: #ccc; }
@@ -6655,9 +6656,9 @@ footer,
 .content {
   min-height: 600px; }
 
-.store__action--edit svg {
-  width: 30px;
-  height: 30px; }
+.store-action-edit svg {
+  height: 30px;
+  width: 30px; }
 
 .center {
   margin: 0 auto;

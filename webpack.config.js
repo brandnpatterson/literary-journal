@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 const javascript = {
@@ -55,6 +56,10 @@ const config = {
   plugins: [
     new ExtractTextPlugin('style.css'),
     uglify,
+    new StyleLintPlugin({
+      files: './src/scss/**/*.scss',
+      syntax: 'scss'
+    }),
     new BrowserSyncPlugin({
       host: 'localhost',
       proxy: 'localhost:7777',

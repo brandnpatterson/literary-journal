@@ -3,16 +3,16 @@ extends layout
 block content
   .inner
     .single
-      .single__hero
-        h2.title.title--single
+      .single-hero
+        h2.title.title-single
           a(href=`/post/${store.slug}`) #{store.name}
-    .single__details.inner
+    .single-details.inner
       p= store.description
     if store.tags
       ul.tags
         each tag in store.tags
           if tag != 'Approved'
             li.tag
-              a.tag__link(href=`/tags/${tag}`)
-                span.tag__text #{tag}
+              a.tag-link(href=`/tags/${tag}`)
+                span.tag-text #{tag}
     p= store.author

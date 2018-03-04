@@ -1,14 +1,14 @@
 mixin storeCard(store = {})
   .store
-    .store__header
+    .store-header
       if user && user.level === 20
-        .store__actions
-          .store__action.store__action--edit
+        .store-actions
+          .store-action.store-action-edit
             a(href=`/posts/${store._id}/edit`)
               != h.icon('pencil')
       h2.title
         a(href=`/post/${store.slug}`) #{store.name}
-    .store__details
+    .store-details
       p= store.description.split(' ').slice(0, 20).join(' ')
       p= store.author
       a.read-more(href=`/post/${store.slug}`) Read More

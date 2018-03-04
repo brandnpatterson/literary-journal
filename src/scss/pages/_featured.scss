@@ -24,13 +24,13 @@
   @media #{$medium-up} {
     height: 400px;
     width: 400px;
+  }
 
-    &:nth-of-type(1) {
-      display: none;
+  &:nth-of-type(1) {
+    display: none;
 
-      @media #{$medium-up} {
-        display: block;
-      }
+    @media #{$medium-up} {
+      display: block;
     }
   }
 }
@@ -58,11 +58,12 @@
 }
 
 .gutter .button {
-  margin: 0 50px;
+  margin: 0 30px;
   transition: 1s background;
   width: 120px;
 
   @media #{$medium-up} {
+    margin: 0 100px;
     width: 150px;
   }
 

@@ -1,10 +1,10 @@
 mixin pagination(page, pages, count)
   .pagination
-    .pagination__prev
+    .pagination-prev
       if page > 1
         a(href=`/posts/page/${page - 1}`) Prev
-    .pagination__text
+    .pagination-text
       p Page #{page} of #{pages} - #{count} total results
-    .pagination__next  
+    .pagination-next  
       if page < pages
         a(href=`/posts/page/${parseFloat(page) + 1}`) Next
