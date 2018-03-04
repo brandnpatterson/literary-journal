@@ -11,13 +11,13 @@ html
         nav.navbar(role='navigation' aria-label='main navigation')
           .navbar-brand
             a.navbar-item(href='/').absolute.small-only
-              img(src='/images/runebear-logo.png' alt='rune bear logo')
+              img.runebear-logo(src='/images/runebear-logo.png' alt='rune bear logo')
             .navbar-burger.is-large(data-target='navMenu')
               span
               span
               span
           .navbar-logo
-          .navbar-menu#navMenu
+          .navbar-menu.navbar-target#navMenu
             .navbar-start
               .navbar-item
               if !user

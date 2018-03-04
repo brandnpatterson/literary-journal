@@ -6,25 +6,26 @@ footer {
 
 footer p {
   color: $lighter;
-  padding: 30px 0 0 10px;
   font-size: 14px;
-  width: 90%;
   max-width: 400px;
+  padding: 30px 0 0 10px;
+  width: 90%;
+
   @media #{$medium-up} {
-    padding: 50px 0 0 40px;
-    margin-bottom: 50px;
     font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 1000%;
+    padding: 50px 0 0 40px;
     text-align: center;
     width: 530px;
-    max-width: 1000%;
   }
-  
+
   span {
     font-weight: bold;
   }
 }
 
 footer .copyright {
-  text-align: center;
   color: $lighter;
+  text-align: center;
 }

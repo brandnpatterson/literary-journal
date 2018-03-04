@@ -6509,8 +6509,8 @@ label.panel-block {
 
 .navbar a {
   color: #bfbfbf;
-  font-size: 25px;
-  font-family: serif; }
+  font-family: serif;
+  font-size: 25px; }
 
 .navbar-burger.is-active {
   position: relative;
@@ -6518,12 +6518,12 @@ label.panel-block {
   .navbar-burger.is-active span {
     background: #bfbfbf; }
 
-#navMenu.is-active {
-  position: relative;
+.navbar-target.is-active {
   padding-top: 20px;
+  position: relative;
   top: -50px; }
 
-.navbar-brand a img.is-active {
+.runebear-logo.is-active {
   position: absolute;
   z-index: 1; }
 
@@ -6534,46 +6534,46 @@ footer {
 
 footer p {
   color: #bfbfbf;
-  padding: 30px 0 0 10px;
   font-size: 14px;
-  width: 90%;
-  max-width: 400px; }
+  max-width: 400px;
+  padding: 30px 0 0 10px;
+  width: 90%; }
   @media screen and (min-width: 64em) {
     footer p {
-      padding: 50px 0 0 40px;
-      margin-bottom: 50px;
       font-size: 18px;
+      margin-bottom: 50px;
+      max-width: 1000%;
+      padding: 50px 0 0 40px;
       text-align: center;
-      width: 530px;
-      max-width: 1000%; } }
+      width: 530px; } }
   footer p span {
     font-weight: bold; }
 
 footer .copyright {
-  text-align: center;
-  color: #bfbfbf; }
+  color: #bfbfbf;
+  text-align: center; }
 
 .featured-header {
   margin-bottom: 100px; }
 
 .featured-hero {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-around;
   margin: 0 auto 50px;
-  width: 85%;
-  max-width: 1000px; }
+  max-width: 1000px;
+  width: 85%; }
   @media screen and (min-width: 64em) {
     .featured-hero {
       flex-direction: row-reverse; } }
 
 .featured-hero img {
-  width: 150px;
-  height: 150px; }
+  height: 150px;
+  width: 150px; }
   @media screen and (min-width: 64em) {
     .featured-hero img {
-      width: 400px;
-      height: 400px; }
+      height: 400px;
+      width: 400px; }
       .featured-hero img:nth-of-type(1) {
         display: none; } }
     @media screen and (min-width: 64em) and (min-width: 64em) {
@@ -6581,31 +6581,31 @@ footer .copyright {
         display: block; } }
 
 .gutter-wrapper {
-  display: flex;
-  justify-content: center;
   align-items: center;
   background: #333333;
-  width: 100%;
+  display: flex;
   height: 200px;
-  margin-bottom: 50px; }
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%; }
 
 .gutter {
   display: flex;
   flex-direction: column; }
 
 .gutter p {
-  text-align: center;
-  color: #bfbfbf; }
+  color: #bfbfbf;
+  text-align: center; }
 
 .gutter .button {
-  width: 120px;
-  margin: 0 30px;
-  transition: 1s background; }
+  margin: 0 50px;
+  transition: 1s background;
+  width: 120px; }
   @media screen and (min-width: 64em) {
     .gutter .button {
-      width: 150px; }
-      .gutter .button:hover {
-        background: #ccc; } }
+      width: 150px; } }
+  .gutter .button:hover {
+    background: #ccc; }
 
 .featured-subtitle {
   font-size: 16px;
@@ -6616,16 +6616,16 @@ footer .copyright {
       width: 550px; } }
 
 .featured-content {
-  width: 90%;
+  margin: 0 auto;
   max-width: 600px;
-  margin: 0 auto; }
+  width: 90%; }
   @media screen and (min-width: 64em) {
     .featured-content {
       display: flex;
       justify-content: space-around;
-      width: 95%;
+      margin: 0 auto;
       max-width: 95%;
-      margin: 0 auto; } }
+      width: 95%; } }
 
 .stores-wrapper {
   margin-bottom: 100px; }
@@ -6637,13 +6637,13 @@ footer .copyright {
   text-align: center; }
   @media screen and (min-width: 64em) {
     .latest-stories {
-      text-align: left;
-      margin-left: 25px; } }
+      margin-left: 25px;
+      text-align: left; } }
 
 .store {
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25);
   margin: 30px 10px;
-  padding: 20px;
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25); }
+  padding: 20px; }
   @media screen and (min-width: 64em) {
     .store {
       margin: 10px 10px 30px; } }

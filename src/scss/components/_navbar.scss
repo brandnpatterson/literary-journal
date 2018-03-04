@@ -4,25 +4,26 @@
 
 .navbar a {
   color: $lighter;
-  font-size: 25px;
   font-family: serif;
+  font-size: 25px;
 }
 
 .navbar-burger.is-active {
   position: relative;
   z-index: 10;
+
   span {
     background: $lighter;
   }
 }
 
-#navMenu.is-active {
-  position: relative;
+.navbar-target.is-active {
   padding-top: 20px;
+  position: relative;
   top: -50px;
 }
 
-.navbar-brand a img.is-active {
+.runebear-logo.is-active {
   position: absolute;
   z-index: 1;
 }
