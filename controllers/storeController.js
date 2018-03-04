@@ -37,11 +37,41 @@ exports.getStores = async (req, res) => {
   });
 };
 
+// getTableOfContentsStores
+exports.getTableOfContents = async (req, res) => {
+  const page = req.params.page || 1;
+
+  const storesPromise = Store
+    .find()
+    .sort({ created: 'desc' });
+
+  const countPromise = Store.count();
+
+  const [stores, count] = await Promise.all([storesPromise, countPromise]);
+
+  const pages = count;
+
+  if (!stores.length && skip) {
+    req.flash('info', `Hey! You asked for page ${page}. The last one is page ${pages}`);
+    res.redirect(`/posts/page/${pages}`);
+    return;
+  }
+
+  res.render('tableOfContents', {
+    title: 'Table of Contentz',
+    stores, page, pages, count
+  });
+};
+
 // getFeaturedStores
 exports.getFeatured = async (req, res) => {
   const page = req.params.page || 1;
-  const limit = 6;
+  const limit = 3;
   const skip = (page * limit) - limit;
+  
+  const allPromise = Store
+    .find()
+    .sort({ created: 'desc' });
 
   const storesPromise = Store
     .find()
@@ -51,18 +81,20 @@ exports.getFeatured = async (req, res) => {
 
   const countPromise = Store.count();
 
-  const [stores, count] = await Promise.all([storesPromise, countPromise]);
+  const [allStores, stores, count] = await Promise.all([allPromise, storesPromise, countPromise]);
 
   const pages = Math.ceil(count / limit);
 
+  const allPages = count;
+  
   if (!stores.length && skip) {
     req.flash('info', `Hey! You asked for page ${page}. The last one is page ${pages}`);
     res.redirect(`/posts/page/${pages}`);
     return;
   }
   res.render('featured', {
-    title: 'Rune Bear',
-    stores, page, pages, count
+    title: 'Featured',
+    stores, page, pages, count, allPages, allStores
   });
 };
 

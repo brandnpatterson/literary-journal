@@ -6550,12 +6550,16 @@ footer {
         text-align: center;
         width: 530px; } }
 
+.featured__header {
+  margin-bottom: 100px; }
+
 .featured__hero {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0 auto 30px;
-  width: 85%; }
+  margin: 0 auto 50px;
+  width: 85%;
+  max-width: 1000px; }
   @media screen and (min-width: 64em) {
     .featured__hero {
       flex-direction: row-reverse; } }
@@ -6564,8 +6568,8 @@ footer {
     height: 150px; }
     @media screen and (min-width: 64em) {
       .featured__hero img {
-        width: 45%;
-        height: 45%; } }
+        width: 400px;
+        height: 400px; } }
     .featured__hero img:nth-of-type(1) {
       display: none; }
       @media screen and (min-width: 64em) {
@@ -6574,11 +6578,59 @@ footer {
 
 .featured__subtitle {
   font-size: 16px;
-  width: 100%; }
+  width: 60%; }
   @media screen and (min-width: 64em) {
     .featured__subtitle {
       font-size: 18px;
       width: 550px; } }
+
+.featured__content {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto; }
+  @media screen and (min-width: 64em) {
+    .featured__content {
+      display: flex;
+      justify-content: space-around;
+      width: 95%;
+      max-width: 95%;
+      margin: 0 auto; } }
+  .featured__content .stores-wrapper {
+    margin-bottom: 100px; }
+    @media screen and (min-width: 64em) {
+      .featured__content .stores-wrapper {
+        width: 50%; } }
+    .featured__content .stores-wrapper .latest-stories {
+      text-align: center; }
+      @media screen and (min-width: 64em) {
+        .featured__content .stores-wrapper .latest-stories {
+          text-align: left;
+          margin-left: 25px; } }
+  .featured__content .all-stores-wrapper {
+    margin-bottom: 100px; }
+    @media screen and (min-width: 64em) {
+      .featured__content .all-stores-wrapper {
+        width: 50%; } }
+    .featured__content .all-stores-wrapper h2 {
+      text-align: center; }
+      @media screen and (min-width: 64em) {
+        .featured__content .all-stores-wrapper h2 {
+          text-align: left; } }
+    .featured__content .all-stores-wrapper .all-stores {
+      margin: 10px;
+      padding: 20px;
+      box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25); }
+      .featured__content .all-stores-wrapper .all-stores .all-store {
+        display: flex;
+        justify-content: space-between; }
+
+.stores .store {
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25); }
+  @media screen and (min-width: 64em) {
+    .stores .store {
+      margin: 10px 10px 30px; } }
 
 footer,
 .navbar-menu {

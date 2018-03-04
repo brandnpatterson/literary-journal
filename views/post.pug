@@ -8,7 +8,6 @@ block content
           a(href=`/post/${store.slug}`) #{store.name}
     .single__details.inner
       p= store.description
-
     if store.tags
       ul.tags
         each tag in store.tags
@@ -16,3 +15,4 @@ block content
             li.tag
               a.tag__link(href=`/tags/${tag}`)
                 span.tag__text #{tag}
+    p= store.author

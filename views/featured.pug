@@ -1,19 +1,32 @@
 extends layout
 
-include mixins/featuredCard
+include mixins/tableOfContentsCard
+include mixins/storeCard
+include mixins/pagination
 
 block content
   .featured
-    .featured__inner
+    .featured__header
       .featured__hero
         img.runebear-logo(src='images/runebear-logo.png')
         img.runebear-word(src='images/runebear-word.png')
       p.featured__subtitle.center Rune Bear is a digital magazine dedicated to Strange, Surreal, Supernatural, and Speculative.
-      //- .featured__content
-      //-   h2 Table of Contents
-      //-   each store in stores
-      //-     if user && user.level === 20
-      //-       +storeCard(store)
-      //-     else if !user || user.level === 10
-      //-       if store.tags.includes('Approved')
-      //-         +storeCard(store)
+    .featured__content
+      .stores-wrapper
+        h2.latest-stories Latest Stories
+        .stores
+          each store in stores
+            if user && user.level === 20
+              +storeCard(store)
+            else if !user || user.level === 10
+              if store.tags.includes('Approved')
+                +storeCard(store)
+      .all-stores-wrapper
+        h2.table-of-contents Table of Contents
+        .all-stores
+          each store in allStores
+            if user && user.level === 20
+              +tableOfContentsCard(store)
+            else if !user || user.level === 10
+              if store.tags.includes('Approved')
+                +tableOfContentsCard(store)

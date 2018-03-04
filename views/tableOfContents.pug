@@ -1,0 +1,13 @@
+extends layout
+
+include mixins/tableOfContentsCard
+
+block content
+  .table-of-contents
+    h2 Table of Contents
+    each store in stores
+      if user && user.level === 20
+        +tableOfContentsCard(store)
+      else if !user || user.level === 10
+        if store.tags.includes('Approved')
+          +tableOfContentsCard(store)

@@ -10,6 +10,8 @@ router.get('/promo', storeController.promotion);
 
 // landing
 router.get('/', catchErrors(storeController.getFeatured));
+router.get('/table-of-contents', catchErrors(storeController.getTableOfContents));
+
 
 router.get('/posts', catchErrors(storeController.getStores));
 router.get('/posts/:page', catchErrors(storeController.getStores));

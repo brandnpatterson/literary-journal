@@ -11,7 +11,7 @@ html
         nav.navbar(role='navigation' aria-label='main navigation')
           .navbar-brand
             a.navbar-item(href='/').absolute.small-only
-              img(src='images/runebear-logo.png' alt='rune bear logo')
+              img(src='/images/runebear-logo.png' alt='rune bear logo')
             .navbar-burger.is-large(data-target='navMenu')
               span
               span
@@ -37,8 +37,8 @@ html
                 .navbar-item: a(href='/account', class=(currentPath.startsWith('/account') ? 'navbar-link--active' : ''))
                   span ACCOUNT 
               else
-                .navbar-item: a(href='/register', class=(currentPath.startsWith('/register') ? 'navbar-link--active' : '')) REGISTER
                 .navbar-item: a(href='/login', class=(currentPath.startsWith('/login') ? 'navbar-link--active' : '')) LOG IN
+                .navbar-item: a(href='/register', class=(currentPath.startsWith('/register') ? 'navbar-link--active' : '')) REGISTER      
     block messages
       if locals.flashes
         .inner-flash

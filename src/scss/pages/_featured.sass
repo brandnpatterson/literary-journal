@@ -1,9 +1,14 @@
+// header
+.featured__header
+  margin-bottom: 100px
+
 .featured__hero
   display: flex
   align-items: center
   justify-content: space-around
-  margin: 0 auto 30px
+  margin: 0 auto 50px
   width: 85%
+  max-width: 1000px
 
   @media #{$medium-up}
     flex-direction: row-reverse
@@ -12,8 +17,8 @@
     width: 150px
     height: 150px
     @media #{$medium-up}
-      width: 45%
-      height: 45%
+      width: 400px
+      height: 400px
     &:nth-of-type(1)
       display: none
       @media #{$medium-up}
@@ -21,7 +26,55 @@
 
 .featured__subtitle
   font-size: 16px
-  width: 100%
+  width: 60%
   @media #{$medium-up}
     font-size: 18px
     width: 550px
+
+// posts
+.featured__content
+  width: 90%
+  max-width: 600px
+  margin: 0 auto
+  @media #{$medium-up}
+    display: flex
+    justify-content: space-around
+    width: 95%
+    max-width: 95%
+    margin: 0 auto
+  .stores-wrapper
+    margin-bottom: 100px
+    @media #{$medium-up}
+      width: 50%
+    
+    .latest-stories // h2
+      text-align: center
+      @media #{$medium-up}
+        text-align: left
+        margin-left: 25px
+
+  .all-stores-wrapper
+    margin-bottom: 100px
+    @media #{$medium-up}
+      width: 50%
+
+    h2
+      text-align: center
+      @media #{$medium-up}
+        text-align: left
+
+    .all-stores
+      margin: 10px
+      padding: 20px
+      box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25)
+      .all-store
+        display: flex
+        justify-content: space-between
+
+.stores
+  .store
+    margin: 10px
+    padding: 20px
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25)
+    @media #{$medium-up}
+      margin: 10px 10px 30px
