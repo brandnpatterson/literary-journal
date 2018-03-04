@@ -11,9 +11,16 @@ block content
         img.runebear-logo(src='images/runebear-logo.png')
         img.runebear-word(src='images/runebear-word.png')
       p.featured__subtitle.center Rune Bear is a digital magazine dedicated to Strange, Surreal, Supernatural, and Speculative.
+    .gutter
+      div.gutter-inner
+        p Have an account? 
+        a.button.is-medium(href='/login') Log In
+      div.gutter-inner
+        p Want to join?
+        a.button.is-medium(href='/register') Register
     .featured__content
       .stores-wrapper
-        h2.latest-stories Latest Stories
+        h2.latest-stories Recent Posts
         .stores
           each store in stores
             if user && user.level === 20

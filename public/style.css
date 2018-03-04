@@ -6528,13 +6528,11 @@ label.panel-block {
   z-index: 1; }
 
 footer {
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
   @media screen and (min-width: 64em) {
     footer {
-      height: 250px;
       display: block; } }
   footer span {
     font-weight: bold; }
@@ -6542,13 +6540,18 @@ footer {
     color: #bfbfbf;
     padding: 30px 0 0 10px;
     font-size: 14px;
-    width: 400px; }
+    width: 90%;
+    max-width: 400px; }
     @media screen and (min-width: 64em) {
       footer p {
         padding: 4% 0 0 4%;
         font-size: 18px;
         text-align: center;
-        width: 530px; } }
+        width: 530px;
+        max-width: 530px; } }
+  footer .copyright {
+    color: #bfbfbf;
+    padding: 4% 0 0 4%; }
 
 .featured__header {
   margin-bottom: 100px; }
@@ -6557,7 +6560,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0 auto 50px;
+  margin: 0 auto 0;
   width: 85%;
   max-width: 1000px; }
   @media screen and (min-width: 64em) {
@@ -6575,6 +6578,30 @@ footer {
       @media screen and (min-width: 64em) {
         .featured__hero img:nth-of-type(1) {
           display: block; } }
+
+.gutter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333333;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 50px; }
+  .gutter .gutter-inner {
+    display: flex;
+    flex-direction: column; }
+    .gutter .gutter-inner p {
+      text-align: center;
+      color: #bfbfbf; }
+    .gutter .gutter-inner .button {
+      width: 120px;
+      margin: 0 30px;
+      transition: 1s all; }
+      @media screen and (min-width: 64em) {
+        .gutter .gutter-inner .button {
+          width: 150px; } }
+      .gutter .gutter-inner .button:hover {
+        background: #ccc; }
 
 .featured__subtitle {
   font-size: 16px;
@@ -6625,7 +6652,7 @@ footer {
         justify-content: space-between; }
 
 .stores .store {
-  margin: 10px;
+  margin: 30px 10px;
   padding: 20px;
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25); }
   @media screen and (min-width: 64em) {
