@@ -7,12 +7,12 @@ import placeholders from './handlers/placeholders';
 import validation from './handlers/validation';
 
 var auth = {
-  init: function () {
+  init () {
     this.cacheDOM();
     this.bindEvents();
     placeholders.init(this.requiredRegister);
   },
-  cacheDOM: function () {
+  cacheDOM () {
     this.formRegister = document.querySelector('.register-form');
     var nameRegister = document.querySelector('.register-name');
     var emailRegister = document.querySelector('.register-email');
@@ -25,15 +25,15 @@ var auth = {
       nameRegister
     ];
   },
-  bindEvents: function () {
+  bindEvents () {
     // test.forElement found in handlers folder
     test.forElement(this.formRegister , 'click', this.liveValidation.bind(this));
     test.forElement(this.formRegister, 'click', this.placeholdersToggle.bind(this));
   },
-  liveValidation: function () {
+  liveValidation () {
     validation.liveValidation(this.requiredRegister);
   },
-  placeholdersToggle: function () {
+  placeholdersToggle () {
     placeholders.toggle(this.requiredRegister);
   }
 }

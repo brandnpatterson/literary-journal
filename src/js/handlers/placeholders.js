@@ -4,18 +4,19 @@
 
 import formData from '../data/form-data';
 
-var placeholders = module.exports = {
+const placeholders = module.exports = {
   // set initial input placeholder values
-  init: function (requiredInputs) {
-    requiredInputs.map(function (input, index) {
+  init (requiredInputs) {
+    requiredInputs.map((input, index) => {
       if (input) {
         input.placeholder = formData.data[index].placeholder;
       }
     }, this);
   },
-  toggle: function (requiredInputs) {
-    requiredInputs.map(function (input, index) {
-      var validationMessage = input.nextSibling;
+  toggle (requiredInputs) {
+    requiredInputs.map((input, index) => {
+      const validationMessage = input.nextSibling;
+
       if (event.target != input) {
         input.placeholder = formData.data[index].placeholder;
       } else {
@@ -24,4 +25,4 @@ var placeholders = module.exports = {
       }
     }, this);
   }
-}
+};

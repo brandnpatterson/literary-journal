@@ -3,10 +3,13 @@
 }
 
 .about-first-section {
-  margin-bottom: 80px;
-
   .about-header {
+    margin-bottom: 80px;
     text-align: center;
+    
+    @media #{$medium-up} {
+      margin-bottom: 150px;
+    }
   }
 }
 
@@ -84,8 +87,8 @@ $ball-speed: 20s;
   width: $ball-size;
 
   h4 {
-    color: $white;
-    font-size: 17px;
+    color: $white !important;
+    font-size: 17px !important;
     margin-top: 20px;
   }
 
@@ -102,12 +105,14 @@ $ball-speed: 20s;
 }
 
 .modal-content {
+  border-radius: 0 !important;
   padding: 55px;
 
   .button {
+    background: $blue;
+    color: $white;
     float: right;
-    margin-bottom: -20px;
-    margin-top: 20px;
+    margin: 20px auto;
   }
 }
 

@@ -7,12 +7,12 @@ import placeholders from './handlers/placeholders';
 import validation from './handlers/validation';
 
 var auth = {
-  init: function () {
+  init () {
     this.cacheDOM();
     this.bindEvents();
     placeholders.init(this.requiredLogIn);
   },
-  cacheDOM: function () {
+  cacheDOM () {
     this.formLogIn = document.querySelector('.login-form');
     var emailLogIn = document.querySelector('.login-email');
     var passLogIn  = document.querySelector('.login-password');
@@ -21,15 +21,15 @@ var auth = {
       passLogIn
     ];
   },
-  bindEvents: function () {
+  bindEvents () {
     // test.forElement found in handlers folder
     test.forElement(this.formLogIn , 'click', this.liveValidation.bind(this));
     test.forElement(this.formLogIn, 'click', this.placeholdersToggle.bind(this));
   },
-  liveValidation: function () {
+  liveValidation () {
     validation.liveValidation(this.requiredLogIn);
   },
-  placeholdersToggle: function () {
+  placeholdersToggle () {
     placeholders.toggle(this.requiredLogIn);
   }
 }

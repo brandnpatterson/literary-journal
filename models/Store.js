@@ -66,6 +66,6 @@ storeSchema.statics.getTagsList = function () {
       }
     }
   ]);
-}
+};
 
 module.exports = mongoose.model('Store', storeSchema, 'stores');

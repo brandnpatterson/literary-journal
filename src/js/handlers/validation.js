@@ -5,10 +5,10 @@
 // formData used to match user input for validation
 import formData from '../data/form-data';
 
-var validation = module.exports = {
-  liveValidation: function (requiredInputs) {
-    requiredInputs.map(function (input, index) {
-      var validationMessage = input.nextSibling;
+const validation = module.exports = {
+  liveValidation (requiredInputs) {
+    requiredInputs.map((input, index) => {
+      const validationMessage = input.nextSibling;
       if (input.value === '') {
         validationMessage.textContent = '';
         validationMessage.nextSibling.classList.add('hidden');
@@ -36,4 +36,4 @@ var validation = module.exports = {
       }
     }, this);
   }
-}
+};

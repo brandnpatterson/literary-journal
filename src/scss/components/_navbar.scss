@@ -18,6 +18,10 @@
   color: $lighter;
   font-family: serif;
   font-size: 25px;
+
+  &:hover {
+    color: $lighter;
+  }
 }
 
 .navbar-burger.is-active {

@@ -2,7 +2,7 @@
   Form data
 */
 
-var formData = module.exports = {
+const formData = module.exports = {
   data: [
     {
       placeholder: 'email',
@@ -23,4 +23,4 @@ var formData = module.exports = {
       placeholder: 'name'
     },
   ]
-}
+};

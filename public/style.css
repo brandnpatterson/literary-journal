@@ -111,6 +111,8 @@ form {
   color: #bfbfbf;
   font-family: serif;
   font-size: 25px; }
+  .navbar a:hover {
+    color: #bfbfbf; }
 
 .navbar-burger.is-active {
   position: relative;
@@ -179,10 +181,12 @@ form {
 .inner.about {
   margin: 100px auto; }
 
-.about-first-section {
-  margin-bottom: 80px; }
-  .about-first-section .about-header {
-    text-align: center; }
+.about-first-section .about-header {
+  margin-bottom: 80px;
+  text-align: center; }
+  @media screen and (min-width: 64em) {
+    .about-first-section .about-header {
+      margin-bottom: 150px; } }
 
 .about-second-section .box.main-content {
   padding: 40px; }
@@ -238,8 +242,8 @@ form {
   top: 100px;
   width: 100px; }
   .animate h4 {
-    color: #fff;
-    font-size: 17px;
+    color: #fff !important;
+    font-size: 17px !important;
     margin-top: 20px; }
   .animate:hover {
     cursor: pointer; }
@@ -251,11 +255,13 @@ form {
   display: flex; }
 
 .modal-content {
+  border-radius: 0 !important;
   padding: 55px; }
   .modal-content .button {
+    background: #3b84be;
+    color: #fff;
     float: right;
-    margin-bottom: -20px;
-    margin-top: 20px; }
+    margin: 20px auto; }
 
 .modal-header {
   align-items: center;

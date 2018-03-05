@@ -6,14 +6,14 @@ exports.promotion = (req, res) => {
   res.render('promo', {
     title: 'Promotion'
   });
-}
+};
 
 // about
 exports.about = (req, res) => {
   res.render('about', {
     title: 'About'
   });
-}
+};
 
 // getStores
 exports.getStores = async (req, res) => {

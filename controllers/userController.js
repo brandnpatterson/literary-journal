@@ -61,7 +61,7 @@ exports.account = (req, res) => {
   res.render('account', {
     title: 'Edit Your Account'
   });
-}
+};
 
 // updateAccount
 exports.updateAccount = async (req, res) => {
@@ -96,4 +96,4 @@ exports.registerKnight = async (req, res, next) => {
   const register = promisify(User.register, User);
   await register(user, req.body.password);
   res.redirect('/');
-}
+};
