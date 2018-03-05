@@ -49,13 +49,13 @@ exists(animateWeekly, 'click', () => {
 exists(modalWeeklyBackground, 'click', () => {
     changeState(animateQuarterly, animateWeekly, 'running');
     toggleModal(modalWeekly);
-    weeklyClicked = true;
+    weeklyClicked = false;
 });
 
 exists(modalWeeklyClose, 'click', () => {
     changeState(animateQuarterly, animateWeekly, 'running');
     toggleModal(modalWeekly);
-    weeklyClicked = true;
+    weeklyClicked = false;
 });
 
 exists(animateQuarterly, 'click', () => {
