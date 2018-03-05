@@ -3,6 +3,7 @@ html
   head
     title= `${title} | ${h.siteName}`
     link(rel='stylesheet', href='/style.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     meta(name='viewport' content='width=device-width, initial-scale=1')
@@ -11,7 +12,7 @@ html
       header
         nav.navbar(role='navigation' aria-label='main navigation')
           .navbar-brand
-            a.navbar-item(href='/').absolute.small-only
+            a.navbar-item.navbar-logo.absolute.small-only(href='/')
               img.runebear-logo(src='/images/runebear-logo.png' alt='rune bear logo')
             .navbar-burger.is-large(data-target='navMenu')
               span

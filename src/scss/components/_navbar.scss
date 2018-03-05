@@ -2,6 +2,18 @@
   margin-bottom: 50px;
 }
 
+.navbar-brand {
+  .navbar-logo {
+    @media #{$medium-up} {
+      display: none !important;
+    }
+  }
+}
+
+.navbar-menu {
+  background: $dark !important;
+}
+
 .navbar a {
   color: $lighter;
   font-family: serif;
