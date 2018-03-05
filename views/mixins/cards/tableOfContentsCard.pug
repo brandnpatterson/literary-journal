@@ -1,0 +1,7 @@
+mixin tableOfContentsCard(store = {})
+  div.all-store-wrapper
+    p.store-tags.hidden= store.tags[1]
+    p.all-store
+      a.piece-title(href=`/post/${store.slug}`) #{store.name}
+      | 
+      a.author(href=`/post/${store.slug}`) #{store.author}

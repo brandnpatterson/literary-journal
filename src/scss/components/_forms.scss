@@ -1,0 +1,75 @@
+form {
+  align-items: center;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px auto 100px;
+  padding: 50px;
+  width: 90%;
+
+  @media #{$medium-up} {
+    width: 800px;
+  }
+  
+  &:nth-of-type(1) {
+    margin: 100px auto;
+  }
+
+  fieldset {
+    border: 0;
+    margin: 5px;
+    position: relative;
+    width: 100%;
+  }
+
+  .button,
+  input {
+    height: 50px;
+    width: 100%;
+  }
+
+  input::placeholder {
+    text-indent: 5px;
+  }
+
+  textarea {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+.button {
+  appearance: none;
+  background: $blue;
+  border: 0;
+  color: $white;
+  width: 170px;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.input-success {
+  color: $red;
+  position: absolute;
+  right: -10px;
+  top: 3px;
+}
+
+.input-fail {
+  color: $green;
+  min-width: 500px;
+  position: absolute;
+}
+
+.all-store-wrapper {
+  margin: 10px auto;
+  width: 100%;
+
+  .all-store {
+    display: flex;
+    justify-content: space-between;
+  }
+}

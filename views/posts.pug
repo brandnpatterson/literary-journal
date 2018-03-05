@@ -1,11 +1,10 @@
 extends layout
 
-include mixins/storeCard
+include mixins/cards/storeCard
 include mixins/pagination
 
 block content
   .inner
-    h2= title
     .stores
       each store in stores
         if user && user.level === 20

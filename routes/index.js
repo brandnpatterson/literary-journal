@@ -10,19 +10,19 @@ router.get('/promo', storeController.promotion);
 
 // landing
 router.get('/', catchErrors(storeController.getFeatured));
+router.get('/about', storeController.about);
 router.get('/table-of-contents', catchErrors(storeController.getTableOfContents));
-
 
 router.get('/posts', catchErrors(storeController.getStores));
 router.get('/posts/:page', catchErrors(storeController.getStores));
 router.get('/posts/page/:page', catchErrors(storeController.getStores));
 
-router.get('/add',
+router.get('/submit',
   authController.isLoggedIn,
   storeController.addStore
 );
-router.post('/add', catchErrors(storeController.createStore));
-router.post('/add/:id', catchErrors(storeController.updateStore));
+router.post('/submit', catchErrors(storeController.createStore));
+router.post('/submit/:id', catchErrors(storeController.updateStore));
 
 router.get('/posts/:id/edit', catchErrors(storeController.editStore));
 router.get('/post/:slug', catchErrors(storeController.getStoreBySlug));

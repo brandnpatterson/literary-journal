@@ -21,17 +21,21 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.siteName = 'Rune Bear';
 
 exports.menu = [
-  { slug: '/posts', title: 'POSTS' },
-  { slug: '/', title: 'WEEKLY' },
-  { slug: '/', title: 'QUARTERLY' }
-
+  { slug: '/submit', title: 'SUBMIT' },
+  { slug: '/table-of-contents', title: 'WEEKLY' },
+  { slug: '/', title: 'QUARTERLY' },
+  { slug: '/about', title: 'ABOUT' },
+  // { slug: '/posts', title: 'POSTS' },
   // { slug: '/tags', title: 'TAGS' }
 ];
 
 exports.menuUser = [
-  { slug: '/posts', title: 'POSTS' },
+  { slug: '/submit', title: 'SUBMIT' },
+  { slug: '/table-of-contents', title: 'WEEKLY' },
+  { slug: '/', title: 'QUARTERLY' },
+  { slug: '/about', title: 'ABOUT' },
+  // { slug: '/posts', title: 'POSTS' },
   // { slug: '/tags', title: 'TAGS' },
-  { slug: '/add', title: 'ADD' }
 ];
 
 exports.choicesKnight = [

@@ -17,6 +17,20 @@
   }
 }
 
+.navbar-center {
+  margin: 20px 0;
+  @media #{$medium-up} {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .navbar-item {
+    @media #{$medium-up} {
+      margin: 0 35px;
+    }
+  }
+}
+
 .navbar-target.is-active {
   padding-top: 20px;
   position: relative;
@@ -26,4 +40,12 @@
 .runebear-logo.is-active {
   position: absolute;
   z-index: 1;
+}
+
+
+.navbar-end {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 60px;
 }

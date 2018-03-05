@@ -4,6 +4,7 @@ html
     title= `${title} | ${h.siteName}`
     link(rel='stylesheet', href='/style.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     meta(name='viewport' content='width=device-width, initial-scale=1')
   body
     block header
@@ -18,27 +19,26 @@ html
               span
           .navbar-logo
           .navbar-menu.navbar-target#navMenu
-            .navbar-start
-              .navbar-item
+            .navbar-center
               if !user
                   each item in h.menu
                     .navbar-item
-                      a(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'navbar-link--active' : ''))
+                      a(href=item.slug)
                         span #{item.title}
               else
                 each item in h.menuUser
                   .navbar-item
-                    a(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'navbar-link--active' : ''))
+                    a(href=item.slug)
                       span #{item.title}
             .navbar-end
               if user
-                .navbar-item: a(href='/logout', class=(currentPath.startsWith('/logout') ? 'navbar-link--active' : ''))
+                .navbar-item: a(href='/logout')
                   span LOGOUT
-                .navbar-item: a(href='/account', class=(currentPath.startsWith('/account') ? 'navbar-link--active' : ''))
+                .navbar-item: a(href='/account')
                   span ACCOUNT 
               else
-                .navbar-item: a(href='/login', class=(currentPath.startsWith('/login') ? 'navbar-link--active' : '')) LOG IN
-                .navbar-item: a(href='/register', class=(currentPath.startsWith('/register') ? 'navbar-link--active' : '')) REGISTER      
+                //- .navbar-item: a(href='/login') LOG IN
+                //- .navbar-item: a(href='/register') REGISTER      
     block messages
       if locals.flashes
         .inner-flash
@@ -55,7 +55,7 @@ html
     footer
       p
         span Rune Bear 
-        | is always looking for submissions from new and established writers. Check out our SUBMIT section for our rules and how to send your prose or poetry.
+        | is always looking for submissions from new and established writers. Check out our ABOUT section for our rules and how to send your prose or poetry.
       br
       a.copyright(href='http://brandnpatterson.com')
         | &copy;

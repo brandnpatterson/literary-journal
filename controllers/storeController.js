@@ -8,6 +8,13 @@ exports.promotion = (req, res) => {
   });
 }
 
+// about
+exports.about = (req, res) => {
+  res.render('about', {
+    title: 'About'
+  });
+}
+
 // getStores
 exports.getStores = async (req, res) => {
   const page = req.params.page || 1;
@@ -66,7 +73,7 @@ exports.getTableOfContents = async (req, res) => {
 // getFeaturedStores
 exports.getFeatured = async (req, res) => {
   const page = req.params.page || 1;
-  const limit = 3;
+  const limit = 2;
   const skip = (page * limit) - limit;
   
   const allPromise = Store
@@ -101,7 +108,7 @@ exports.getFeatured = async (req, res) => {
 // addStore
 exports.addStore = (req, res) => {
   res.render('editStore', {
-    title: 'Add Store'
+    title: 'Submit Post'
   });
 };
 

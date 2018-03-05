@@ -10,17 +10,27 @@ var validation = module.exports = {
     requiredInputs.map(function (input, index) {
       var validationMessage = input.nextSibling;
       if (input.value === '') {
+        validationMessage.textContent = '';
+        validationMessage.nextSibling.classList.add('hidden');
         event.preventDefault();
         return;
       } else if (input.value.match(formData.data[index].regex)) {
         input.parentNode.classList.add('flex');
-        this.failEmail ? validationMessage.textContent = '' : validationMessage.textContent = '√';
+
+        if (this.failEmail) {
+          return false;
+        } else {
+          validationMessage.nextSibling.classList.remove('hidden');
+        }
+
+        validationMessage.textContent = '';
         validationMessage.classList.remove('input-fail');
         validationMessage.classList.add('input-success');
       } else {
         event.preventDefault();
         input.parentNode.classList.remove('flex');
         validationMessage.textContent = formData.data[index].error;
+        validationMessage.nextSibling.classList.add('hidden');
         validationMessage.classList.remove('input-success');
         validationMessage.classList.add('input-fail');
       }

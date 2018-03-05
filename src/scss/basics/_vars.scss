@@ -1,9 +1,14 @@
 // colors
-$dark: rgb(51, 51, 51);
-$light: rgb(162, 162, 162);
-$lighter: rgb(191, 191, 191);
-$blue: rgb(59, 132, 190);
-$red: rgb(255, 0, 0);
+$dark: #333;
+$light: #a2a2a2;
+$lighter: #bfbfbf;
+$blue: #3b84be;
+$blue2: #6397c8;
+$red: #f00;
+$green: #008000;
+$gray: #bfbfbf;
+$white: #fff;
+$box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 
 // media queries
 $small-only: 'screen and (max-width: 39.9375em)';

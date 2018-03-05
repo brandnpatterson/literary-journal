@@ -1,7 +1,11 @@
 mixin accountForm()
   form.account-form(action='/account' method='POST')
-    label(for='name') Name
-    input(type='text' name='name' value=user.name)
-    label(for='email') Email
-    input(type='text' name='email' value=user.email)
-    input(type='submit' value='Update My Account')
+    h2 Edit Your Account
+    fieldset
+      label(for='name') Name
+      input(type='text' name='name' value=user.name)
+    fieldset
+      label(for='email') Email
+      input(type='text' name='email' value=user.email)
+    fieldset
+      input.button(type='submit' value='Update')

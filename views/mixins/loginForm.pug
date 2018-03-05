@@ -1,9 +1,13 @@
 mixin loginForm()
   form.login-form(action='/login' method='POST')
+    h2 Login
     fieldset
       input.login-email(type='text' name='email')
       p
+      i.fa.fa-check.hidden
     fieldset
       input.login-password(type='password' name='password')
       p
-    input.button(type='submit' value='Log In')
+      i.fa.fa-check.hidden
+    fieldset
+      input.button(type='submit' value='Log In')

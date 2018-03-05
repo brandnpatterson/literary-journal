@@ -1,11 +1,15 @@
 mixin storeForm(store = {})
-  form(action=`/add/${store._id || ''}` method='POST')
-    label(for='name') Name
-    input(type='text' name='name' value=store.name)
-    label(for='name') Author
-    input(type='text' name='author' value=store.author)
-    label(for='description') Description
-    textarea(name='description')= store.description
+  form(action=`/submit/${store._id || ''}` method='POST')
+    h2 Submit Post
+    fieldset
+      label(for='name') Name
+      input(type='text' name='name' value=store.name)
+    fieldset
+      label(for='name') Author
+      input(type='text' name='author' value=store.author)
+    fieldset
+      label.submit-text-area-label(for='description') Description
+      textarea.submit-text-area(name='description')= store.description
     - const tags = store.tags || []
     ul.tags
       if user.level === 20
@@ -22,4 +26,5 @@ mixin storeForm(store = {})
               checked=(tags.includes(choice))
             )
             label(for=choice) #{choice}
-    input(type='submit' value='Save' class='button')
+    fieldset
+      input.button(type='submit' value='Save' class='button')

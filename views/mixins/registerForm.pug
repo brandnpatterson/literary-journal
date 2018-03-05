@@ -1,5 +1,7 @@
 mixin registerForm()
   form.register-form(action='/register' method='POST')
+    h2 Register an Account
+    br
     fieldset
       input.register-name(type='text' name='name')
       p
@@ -12,4 +14,5 @@ mixin registerForm()
     fieldset
       input.register-password-confirm(type='password' name='password-confirm')
       p
+    br
     input.button(type='submit' value='Register')

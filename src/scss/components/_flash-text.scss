@@ -1,0 +1,19 @@
+.flash {
+  align-items: center;
+  background: $blue;
+  box-shadow: $box-shadow;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  top: 53px;
+  width: 100%;
+
+  .flash-text {
+    color: $white;
+    font-size: 20px;
+    padding-right: 50px;
+  }
+}
