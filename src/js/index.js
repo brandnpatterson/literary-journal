@@ -10,7 +10,7 @@ import './register.js';
 import './table-of-contents.js';
 import './about.js';
 
-import { $, $$ } from './modules/bling';
+import { $ } from './modules/bling';
 import typeAhead from './modules/typeAhead';
 
 typeAhead( $('.search') );

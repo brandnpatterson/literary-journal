@@ -9,6 +9,7 @@ const javascript = {
   test: /\.(js)$/,
   use: [{
     loader: 'babel-loader',
+    loader: 'eslint-loader',
     options: {
       presets: 'env'
     }
@@ -33,6 +34,11 @@ const styles = {
   // We don't just pass an array of loaders, we run them through the extract plugin so they can be outputted to their own .css file
   use: ExtractTextPlugin.extract(['css-loader?sourceMap', postcss, 'sass-loader?sourceMap'])
 };
+
+const json = {
+  test: /\.json$/,
+  use: 'json-loader' 
+}
 
 const uglify = new webpack.optimize.UglifyJsPlugin({
   compress: {

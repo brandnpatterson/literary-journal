@@ -12,7 +12,7 @@ const removeDuplicates = (originalArray, objKey) => {
         }
     }
     return trimmedArray;
-}
+};
 
 const storeTags = Array.prototype.slice.call(document.querySelectorAll('.store-tags'), 0);
 let storesArr = [];
@@ -26,7 +26,7 @@ storeTags.map((tag, i) => {
     const filteredArr = removeDuplicates(storesArr, 'value');
 
     filteredArr.map(filtered => {
-        storesArr.map(unfiltered => {
+        storesArr.map(() => {
             if (filtered.index === i) {
                 tag.classList.remove('hidden');
             }
