@@ -291,48 +291,53 @@ form {
     .featured-hero {
       flex-direction: row-reverse; } }
 
-.featured-hero .runebear-logo {
+.featured-hero .runebear-logo,
+.featured-hero .runebear-word {
   margin-top: 200px;
-  margin-left: -100px;
   height: 150px;
   width: 150px; }
   @media screen and (min-width: 64em) {
-    .featured-hero .runebear-logo {
+    .featured-hero .runebear-logo,
+    .featured-hero .runebear-word {
       height: 400px;
       width: 400px; } }
-  .featured-hero .runebear-logo:nth-of-type(1) {
+  .featured-hero .runebear-logo:nth-of-type(1),
+  .featured-hero .runebear-word:nth-of-type(1) {
     display: none; }
     @media screen and (min-width: 64em) {
-      .featured-hero .runebear-logo:nth-of-type(1) {
+      .featured-hero .runebear-logo:nth-of-type(1),
+      .featured-hero .runebear-word:nth-of-type(1) {
         display: block; } }
 
 .coming-soon-wrapper {
   position: relative;
-  text-align: center;
-  color: white; }
+  text-align: center; }
 
 .coming-soon {
-  font-size: 40px !important;
   font-weight: bold !important;
   width: 400px;
   position: absolute;
-  top: 22%;
+  top: 31%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  font-size: 23px !important; }
+  @media screen and (min-width: 64em) {
+    .coming-soon {
+      top: 22%;
+      left: 50%;
+      font-size: 40px !important; } }
 
 .featured-hero .speech-bubble {
-  margin-top: 0;
-  height: 250px;
-  width: 250px; }
+  height: 300px;
+  width: 300px;
+  margin-top: -60px;
+  transform: rotate(180deg); }
   @media screen and (min-width: 64em) {
     .featured-hero .speech-bubble {
+      transform: none;
+      margin-top: inherit;
       height: 450px;
       width: 450px; } }
-  .featured-hero .speech-bubble:nth-of-type(1) {
-    display: none; }
-    @media screen and (min-width: 64em) {
-      .featured-hero .speech-bubble:nth-of-type(1) {
-        display: block; } }
 
 .submit.inner {
   display: flex;
