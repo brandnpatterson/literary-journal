@@ -22,8 +22,8 @@ exports.siteName = 'Rune Bear';
 
 exports.menu = [
   { slug: '/submit', title: 'SUBMIT' },
-  { slug: '/table-of-contents', title: 'WEEKLY' },
-  { slug: '/', title: 'QUARTERLY' },
+  { slug: '/coming-soon', title: 'WEEKLY' },
+  { slug: '/coming-soon', title: 'QUARTERLY' },
   { slug: '/about', title: 'ABOUT' },
   // { slug: '/posts', title: 'POSTS' },
   // { slug: '/tags', title: 'TAGS' }

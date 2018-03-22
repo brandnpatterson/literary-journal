@@ -8,19 +8,27 @@ const { catchErrors } = require('../handlers/errorHandlers');
 // promotion landing page
 router.get('/promo', storeController.promotion);
 
+// find authors
+router.get('/submit', storeController.submit);
+router.get('/coming-soon', storeController.comingSoon);
+
 // landing
 router.get('/', catchErrors(storeController.getFeatured));
 router.get('/about', storeController.about);
-router.get('/table-of-contents', catchErrors(storeController.getTableOfContents));
 
+
+router.get('/table-of-contents', catchErrors(storeController.getTableOfContents));
 router.get('/posts', catchErrors(storeController.getStores));
 router.get('/posts/:page', catchErrors(storeController.getStores));
 router.get('/posts/page/:page', catchErrors(storeController.getStores));
 
-router.get('/submit',
-  authController.isLoggedIn,
-  storeController.addStore
-);
+
+// on hold - replace submit
+// router.get('/submit',
+//   authController.isLoggedIn,
+//   storeController.addStore
+// );
+
 router.post('/submit', catchErrors(storeController.createStore));
 router.post('/submit/:id', catchErrors(storeController.updateStore));
 

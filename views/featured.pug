@@ -10,23 +10,28 @@ block content
         img.runebear-logo(src='images/runebear-logo.png')
         img.runebear-word(src='images/runebear-word.png')
       p.featured-subtitle.center Rune Bear is a digital magazine dedicated to Strange, Surreal, Supernatural, and Speculative.
-    .gutter-wrapper
-      .gutter
-        p Have an account? 
-        a.button.is-medium(href='/login') Log In
-      .gutter
-        p Want to join?
-        a.button.is-medium(href='/register') Register
-    .featured-content
-      .stores-wrapper
-        h2.latest-stories Recent Posts
-        .stores
-          each store in stores
-            if user && user.level === 20
-              +storeCard(store)
-            else if !user || user.level === 10
-              if store.tags.includes('Approved')
-                +storeCard(store)
+
+    //-
+    //-   Removed login feature for now
+    //-
+
+    //- .gutter-wrapper
+      //- .gutter
+        //- p Have an account? 
+        //- a.button.is-medium(href='/login') Log In
+      //- .gutter
+        //- p Want to join?
+        //- a.button.is-medium(href='/register') Register
+    //- .featured-content
+    //-   .stores-wrapper
+    //-     h2.latest-stories Recent Posts
+    //-     .stores
+    //-       each store in stores
+    //-         if user && user.level === 20
+    //-           +storeCard(store)
+    //-         else if !user || user.level === 10
+    //-           if store.tags.includes('Approved')
+    //-             +storeCard(store)
       //- .all-stores-wrapper
       //-   h2.table-of-contents Table of Contents
       //-   .all-stores

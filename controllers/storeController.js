@@ -8,6 +8,21 @@ exports.promotion = (req, res) => {
   });
 };
 
+
+// submit
+exports.submit = (req, res) => {
+  res.render('submit', {
+    title: 'Submit Post'
+  });
+};
+
+// coming soon
+exports.comingSoon = (req, res) => {
+  res.render('comingSoon', {
+    title: 'Coming Soon'
+  });
+};
+
 // about
 exports.about = (req, res) => {
   res.render('about', {
@@ -65,7 +80,7 @@ exports.getTableOfContents = async (req, res) => {
   }
 
   res.render('tableOfContents', {
-    title: 'Table of Contentz',
+    title: 'Table of Contents',
     stores, page, pages, count
   });
 };
