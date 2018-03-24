@@ -293,8 +293,8 @@ form {
 
 .featured-hero .runebear-logo,
 .featured-hero .runebear-word {
-  margin-top: 200px;
   height: 150px;
+  margin-top: 50px;
   width: 150px; }
   @media screen and (min-width: 64em) {
     .featured-hero .runebear-logo,
@@ -314,29 +314,29 @@ form {
   text-align: center; }
 
 .coming-soon {
+  font-size: 23px !important;
   font-weight: bold !important;
-  width: 400px;
+  left: 50%;
   position: absolute;
   top: 31%;
-  left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 23px !important; }
+  width: 400px; }
   @media screen and (min-width: 64em) {
     .coming-soon {
-      top: 22%;
+      font-size: 40px !important;
       left: 50%;
-      font-size: 40px !important; } }
+      top: 27%; } }
 
 .featured-hero .speech-bubble {
   height: 300px;
-  width: 300px;
   margin-top: -60px;
-  transform: rotate(180deg); }
+  transform: rotate(180deg);
+  width: 300px; }
   @media screen and (min-width: 64em) {
     .featured-hero .speech-bubble {
-      transform: none;
-      margin-top: inherit;
       height: 450px;
+      margin-top: inherit;
+      transform: none;
       width: 450px; } }
 
 .submit.inner {
@@ -349,25 +349,25 @@ form {
       flex-direction: row; } }
 
 .submit-card {
-  border: 1px solid black;
+  border: 1px solid #000;
   margin: 50px auto;
-  padding: 0 30px 30px 30px;
+  padding: 0 30px;
   width: 100%; }
   @media screen and (min-width: 64em) {
     .submit-card {
       margin: 50px 30px;
       width: 50%; } }
   .submit-card h1 {
-    padding-top: 0;
-    margin-top: 30px;
-    text-align: center;
-    font-family: serif;
+    font-family: Garamond, serif;
+    font-size: 110px !important;
     font-weight: bold !important;
-    font-size: 110px !important; }
+    margin-top: 30px;
+    padding-top: 0;
+    text-align: center; }
   .submit-card p {
-    color: gray; }
+    color: #bfbfbf; }
   .submit-card .highlight {
-    color: black; }
+    color: #000; }
 
 .gutter-wrapper {
   align-items: center;

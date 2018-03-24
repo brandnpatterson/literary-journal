@@ -18,8 +18,8 @@
 
 .featured-hero .runebear-logo,
 .featured-hero .runebear-word {
-  margin-top: 200px;
   height: 150px;
+  margin-top: 50px;
   width: 150px;
 
   @media #{$medium-up} {
@@ -43,29 +43,31 @@
 }
 
 .coming-soon {
+  font-size: 23px !important;
   font-weight: bold !important;
-  width: 400px;
+  left: 50%;
   position: absolute;
   top: 31%;
-  left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 23px !important;
+  width: 400px;
+
   @media #{$medium-up} {
-    top: 22%;
-    left: 50%;
     font-size: 40px !important;
+    left: 50%;
+    top: 27%;
   }
 }
 
 .featured-hero .speech-bubble {
   height: 300px;
-  width: 300px;
   margin-top: -60px;
   transform: rotate(180deg);
+  width: 300px;
+
   @media #{$medium-up} {
-    transform: none;
-    margin-top: inherit;
     height: 450px;
+    margin-top: inherit;
+    transform: none;
     width: 450px;
   }
 }
@@ -80,31 +82,33 @@
     flex-direction: row;
   }
 }
+
 .submit-card {
-  border: 1px solid black;
+  border: 1px solid $black;
   margin: 50px auto;
-  padding: 0 30px 30px 30px;
+  padding: 0 30px;
   width: 100%;
+
   @media #{$medium-up} {
     margin: 50px 30px;
     width: 50%;
   }
 
   h1 {
-    padding-top: 0;
-    margin-top: 30px;
-    text-align: center;
-    font-family: serif;
-    font-weight: bold !important;
+    font-family: Garamond, serif;
     font-size: 110px !important;
+    font-weight: bold !important;
+    margin-top: 30px;
+    padding-top: 0;
+    text-align: center;
   }
 
   p {
-    color: gray;
+    color: $gray;
   }
 
   .highlight {
-    color: black;
+    color: $black;
   }
 }
 
