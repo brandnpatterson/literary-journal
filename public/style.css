@@ -369,7 +369,8 @@ form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 200px; }
+  margin-bottom: 200px;
+  margin-top: -100px; }
   @media screen and (min-width: 64em) {
     .coming-soon-wrapper .featured-hero {
       flex-direction: row; } }
@@ -410,6 +411,10 @@ form {
   @media screen and (min-width: 64em) {
     .submit.inner {
       flex-direction: row; } }
+
+@media screen and (min-width: 64em) {
+  .coming-soon-wrapper .featured-hero .runebear-logo {
+    margin-top: 300px; } }
 
 .submit-card {
   padding-bottom: 100px; }
