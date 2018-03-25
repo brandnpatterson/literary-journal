@@ -223,6 +223,7 @@ form {
 .about .container {
   border: 2px solid #808080;
   margin: 50px auto;
+  max-width: 950px;
   padding: 30px;
   width: 80%; }
   @media screen and (min-width: 64em) {
