@@ -231,16 +231,6 @@ form {
       display: flex;
       justify-content: space-around;
       width: 1100px; } }
-  .about .container .content-image {
-    display: block;
-    margin: 0 auto 20px;
-    max-width: 400px;
-    width: 90%; }
-    @media screen and (min-width: 64em) {
-      .about .container .content-image {
-        height: 400px;
-        margin: 0;
-        width: 400px; } }
   .about .container p {
     font-size: 18px; }
     @media screen and (min-width: 64em) {
@@ -248,6 +238,19 @@ form {
         font-size: 20px;
         padding-left: 40px;
         padding-top: 10px; } }
+
+.about .container .image-container {
+  width: 90%; }
+  .about .container .image-container .content-image {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 400px;
+    width: 100%; }
+    @media screen and (min-width: 64em) {
+      .about .container .image-container .content-image {
+        height: 400px;
+        margin: 0;
+        width: 400px; } }
 
 .about .content-inner h2 {
   font-size: 30px;
