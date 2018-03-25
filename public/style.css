@@ -239,15 +239,15 @@ form {
         padding-left: 40px;
         padding-top: 10px; } }
 
-.about .container .image-container {
+.image-container {
   width: 90%; }
-  .about .container .image-container .content-image {
+  .image-container .content-image {
     display: block;
     margin: 0 auto 20px;
     max-width: 400px;
     width: 100%; }
     @media screen and (min-width: 64em) {
-      .about .container .image-container .content-image {
+      .image-container .content-image {
         height: 400px;
         margin: 0;
         width: 400px; } }
