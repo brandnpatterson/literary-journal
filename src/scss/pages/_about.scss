@@ -60,6 +60,7 @@
 
   @media #{$medium-up} {
     display: flex;
+    justify-content: space-around;
     width: 1100px;
   }
 
