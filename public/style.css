@@ -430,6 +430,9 @@ form {
   padding: 50px;
   width: 90%; }
 
+footer a:hover {
+  color: #3b84be; }
+
 footer,
 .navbar-menu {
   background: #333; }

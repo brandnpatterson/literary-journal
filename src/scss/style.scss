@@ -15,6 +15,12 @@
 @import 'pages/table-of-contents';
 @import 'pages/promotional';
 
+footer a {
+  &:hover {
+    color: $blue;
+  }
+}
+
 // layout
 footer,
 .navbar-menu {
