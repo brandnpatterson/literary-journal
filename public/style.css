@@ -187,11 +187,15 @@ form {
 .about .featured-hero {
   align-items: center;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
   width: 57%; }
+  @media screen and (min-width: 64em) {
+    .about .featured-hero {
+      flex-direction: row; } }
   .about .featured-hero h2 {
     font-family: Garamond;
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
     margin-top: 40px !important; }
     @media screen and (min-width: 64em) {
@@ -273,10 +277,10 @@ form {
   justify-content: space-around;
   margin: 0 auto 50px;
   max-width: 1000px;
-  width: 85%; }
+  width: 65%; }
   @media screen and (min-width: 64em) {
     .featured-hero {
-      flex-direction: row-reverse; } }
+      width: 85%; } }
 
 .featured-hero .runebear-logo,
 .featured-hero .runebear-word {
@@ -288,52 +292,6 @@ form {
     .featured-hero .runebear-word {
       height: 400px;
       width: 400px; } }
-  .featured-hero .runebear-logo:nth-of-type(1),
-  .featured-hero .runebear-word:nth-of-type(1) {
-    display: none; }
-    @media screen and (min-width: 64em) {
-      .featured-hero .runebear-logo:nth-of-type(1),
-      .featured-hero .runebear-word:nth-of-type(1) {
-        display: block; } }
-
-.coming-soon-wrapper {
-  position: relative;
-  text-align: center; }
-
-.coming-soon {
-  font-size: 23px !important;
-  font-weight: bold !important;
-  left: 50%;
-  position: absolute;
-  top: 31%;
-  transform: translate(-50%, -50%);
-  width: 400px; }
-  @media screen and (min-width: 64em) {
-    .coming-soon {
-      font-size: 40px !important;
-      left: 50%;
-      top: 27%; } }
-
-.featured-hero .speech-bubble {
-  height: 300px;
-  margin-top: -60px;
-  transform: rotate(180deg);
-  width: 300px; }
-  @media screen and (min-width: 64em) {
-    .featured-hero .speech-bubble {
-      height: 450px;
-      margin-top: inherit;
-      transform: none;
-      width: 450px; } }
-
-.submit.inner {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 95%; }
-  @media screen and (min-width: 64em) {
-    .submit.inner {
-      flex-direction: row; } }
 
 .submit-card {
   border: 1px solid #000;
@@ -408,7 +366,50 @@ form {
       width: 95%; } }
 
 .coming-soon-wrapper .featured-hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 200px; }
+  @media screen and (min-width: 64em) {
+    .coming-soon-wrapper .featured-hero {
+      flex-direction: row; } }
+
+.coming-soon-inner {
+  position: relative;
+  text-align: center; }
+
+.featured-hero .speech-bubble {
+  height: 200px;
+  width: 200px; }
+  @media screen and (min-width: 64em) {
+    .featured-hero .speech-bubble {
+      height: 450px;
+      margin-top: inherit;
+      transform: none;
+      width: 450px; } }
+
+.coming-soon {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  left: 50%;
+  position: absolute;
+  top: 31%;
+  transform: translate(-50%, -50%);
+  width: 400px; }
+  @media screen and (min-width: 64em) {
+    .coming-soon {
+      font-size: 35px !important;
+      left: 50%;
+      top: 30%; } }
+
+.submit.inner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 95%; }
+  @media screen and (min-width: 64em) {
+    .submit.inner {
+      flex-direction: row; } }
 
 .submit-card {
   padding-bottom: 100px; }

@@ -5,12 +5,17 @@
 .about .featured-hero {
   align-items: center;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
   width: 57%;
 
+  @media #{$medium-up} {
+    flex-direction: row;
+  }
+
   h2 {
     font-family: Garamond;
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
     margin-top: 40px !important;
 

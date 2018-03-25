@@ -1,0 +1,51 @@
+.coming-soon-wrapper .featured-hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+
+  @media #{$medium-up} {
+    flex-direction: row;
+  }
+}
+
+.coming-soon-inner {
+  position: relative;
+  text-align: center;
+}
+
+.featured-hero .speech-bubble {
+  height: 200px;
+  width: 200px;
+  @media #{$medium-up} {
+    height: 450px;
+    margin-top: inherit;
+    transform: none;
+    width: 450px;
+  }
+}
+
+.coming-soon {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  left: 50%;
+  position: absolute;
+  top: 31%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  @media #{$medium-up} {
+    font-size: 35px !important;
+    left: 50%;
+    top: 30%;
+  }
+}
+
+.submit.inner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 95%;
+  @media #{$medium-up} {
+    flex-direction: row;
+  }
+}

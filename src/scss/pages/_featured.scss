@@ -9,10 +9,10 @@
   justify-content: space-around;
   margin: 0 auto 50px;
   max-width: 1000px;
-  width: 85%;
+  width: 65%;
 
   @media #{$medium-up} {
-    flex-direction: row-reverse;
+    width: 85%;
   }
 }
 
@@ -25,61 +25,6 @@
   @media #{$medium-up} {
     height: 400px;
     width: 400px;
-  }
-
-  &:nth-of-type(1) {
-    display: none;
-
-    @media #{$medium-up} {
-      display: block;
-    }
-  }
-}
-
-// coming soon
-.coming-soon-wrapper {
-  position: relative;
-  text-align: center;
-}
-
-.coming-soon {
-  font-size: 23px !important;
-  font-weight: bold !important;
-  left: 50%;
-  position: absolute;
-  top: 31%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-
-  @media #{$medium-up} {
-    font-size: 40px !important;
-    left: 50%;
-    top: 27%;
-  }
-}
-
-.featured-hero .speech-bubble {
-  height: 300px;
-  margin-top: -60px;
-  transform: rotate(180deg);
-  width: 300px;
-
-  @media #{$medium-up} {
-    height: 450px;
-    margin-top: inherit;
-    transform: none;
-    width: 450px;
-  }
-}
-
-.submit.inner {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 95%;
-
-  @media #{$medium-up} {
-    flex-direction: row;
   }
 }
 
@@ -175,12 +120,4 @@
     max-width: 95%;
     width: 95%;
   }
-}
-
-
-
-/// coming soon 
-
-.coming-soon-wrapper .featured-hero {
-  margin-bottom: 200px;
 }
