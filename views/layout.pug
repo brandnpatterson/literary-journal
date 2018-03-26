@@ -32,13 +32,13 @@ html
                   .navbar-item
                     a(href=item.slug)
                       span #{item.title}
-            .navbar-end
-              if user
-                .navbar-item: a(href='/logout')
-                  span LOGOUT
-                .navbar-item: a(href='/account')
-                  span ACCOUNT 
-              else
+            //- .navbar-end
+            //-   if user
+            //-     .navbar-item: a(href='/logout')
+            //-       span LOGOUT
+            //-     .navbar-item: a(href='/account')
+            //-       span ACCOUNT 
+            //-   else
                 //- .navbar-item: a(href='/login') LOG IN
                 //- .navbar-item: a(href='/register') REGISTER      
     block messages

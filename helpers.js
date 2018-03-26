@@ -21,6 +21,7 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.siteName = 'Rune Bear';
 
 exports.menu = [
+  { slug: '/', title: 'HOME' },
   { slug: '/submit', title: 'SUBMIT' },
   { slug: '/coming-soon', title: 'WEEKLY' },
   { slug: '/coming-soon', title: 'QUARTERLY' },
