@@ -46,3 +46,5 @@ exports.choicesKnight = [
 exports.choices = [
  'Short Story', 'Poetry', 'Prose', 'Non Fiction'
 ];
+
+exports.subtitle = 'Rune Bear is a literary magazine dedicated to the Strange, Surreal, Supernatural, and Speculative.';
